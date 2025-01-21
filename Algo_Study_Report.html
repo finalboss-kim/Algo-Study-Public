@@ -1,0 +1,319 @@
+
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Algo Study Report</title>
+    <style>
+      body {
+        margin: 0; padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9; color: #333;
+      }
+      header {
+        background-color: #2a3d66; color: white;
+        padding: 15px; text-align: center;
+      }
+      .tabs {
+        display: flex; justify-content: center;
+        background-color: #2a3d66;
+        border-bottom: 2px solid #ddd;
+      }
+      .tab {
+        padding: 10px 20px; cursor: pointer;
+        color: white; font-size: 18px;
+      }
+      .tab:hover {
+        background-color: #1e2b41;
+      }
+      .tab.active {
+        background-color: #1e2b41;
+        border-bottom: 2px solid white;
+      }
+      .container {
+        padding: 20px; margin-top: 10px;
+        display: none;
+      }
+      .container.active {
+        display: block;
+      }
+      table {
+        width: 100%; border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+      th, td {
+        border: 1px solid #ddd;
+        padding: 8px; text-align: center;
+      }
+      th {
+        background-color: #2a3d66; color: white;
+      }
+      .rank-col { width: 60px; }
+      .user-box {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 15px;
+        background: #fff;
+      }
+      
+.detail-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+.detail-table {
+    border-collapse: collapse;
+    min-width: 800px;
+}
+.detail-table th, .detail-table td {
+    border: 1px solid #ddd;
+    padding: 8px; text-align: center;
+}
+.detail-table th {
+    background-color: #3c4b7c; color: white;
+}
+.cell-solved {
+    background-color: #d7f8d7; /* 정답=초록 */
+}
+.cell-attempted {
+    background-color: #fff799; /* 풀이=노랑 */
+}
+.cell-penalty {
+    background-color: pink; /* 패널티=핑크 */
+    color: #333;
+}
+.cell-nottried {
+    background-color: #f0f0f0; /* 미시도=회색 */
+    color: #999;
+}
+.month-title {
+    margin-top: 30px;
+    font-size: 20px; font-weight: bold;
+    color: #333;
+}
+
+
+      /* 유저 프로필 탭용 추가 스타일 */
+      .profile-container {
+        display: flex;
+        gap: 20px; 
+      }
+      .user-list {
+        background-color: #fafafa;
+        border: 1px solid #ccc;
+        padding: 15px;
+        width: 200px;
+        border-radius: 6px;
+      }
+      .user-list .list-title {
+        margin-top: 0;
+        font-size: 18px;
+        color: #444;
+      }
+      .user-item {
+        padding: 8px;
+        border-bottom: 1px solid #eee;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+      .user-item:hover {
+        background-color: #f0f8ff; /* 살짝 파란 빛 */
+        color: #333;
+      }
+
+      .user-details {
+        flex: 1;
+        min-width: 0;
+      }
+      .detail-card {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        padding: 15px;
+        min-height: 250px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+      .detail-card h3 {
+        margin-top: 0;
+      }
+
+    </style>
+</head>
+<body>
+<header><h1>Algo Study Report</h1></header>
+
+<!-- 상단 배너 -->
+<div style="padding: 15px; text-align: center; background-color: #f7f7f7; margin-bottom: 20px; border-bottom: 2px solid #ddd;">
+  <h2 style="margin: 0;">🏆 1위 현황 🏆</h2>
+  <p><strong>🌟 전체 1위:</strong> kzzang131 (맞힌:1, 푼:2)</p>
+  <p><strong>📅 이전 달 1위:</strong> 데이터 없음</p>
+  <p><strong>📅 이번 달 1위:</strong> kzzang131 (맞힌:1, 푼:2)</p>
+</div>
+
+<div class="tabs">
+  <div class="tab active" onclick="showTab('tab-leaderboard')">순위 & 패널티</div>
+  <div class="tab" onclick="showTab('tab-profile')">유저 프로필</div>
+  <div class="tab" onclick="showTab('tab-details')">상세 내역</div>
+</div>
+
+<!-- Tab 1: 리더보드 -->
+<div class="container active" id="tab-leaderboard">
+  <h2>리더보드</h2>
+  <table>
+    <thead>
+      <tr>
+        <th class="rank-col">순위</th>
+        <th>유저</th>
+        <th>맞힌 문제</th>
+        <th>푼 문제</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>1</td>
+        <td>kzzang131</td>
+        <td>1</td>
+        <td>2</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td>spacegg13</td>
+        <td>0</td>
+        <td>1</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td>ooo_0502</td>
+        <td>0</td>
+        <td>1</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td>finalboss_kim</td>
+        <td>0</td>
+        <td>1</td>
+      </tr>
+
+    </tbody>
+  </table>
+  <h2>패널티보드 (패널티 10 이상)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th class="rank-col">순위</th>
+        <th>유저</th>
+        <th>패널티</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+</div>
+
+
+<!-- Tab 2: 유저 프로필 -->
+<div class="container" id="tab-profile">
+  <h2 style="text-align:center; margin-bottom:20px;">유저 프로필</h2>
+
+  <div class="profile-container">
+    <div class="user-list" id="user-list">
+      <h3 class="list-title">사용자 목록</h3>
+<div class="user-item" onclick="showUserProfile('finalboss_kim')">finalboss_kim</div><div class="user-item" onclick="showUserProfile('kzzang131')">kzzang131</div><div class="user-item" onclick="showUserProfile('ooo_0502')">ooo_0502</div><div class="user-item" onclick="showUserProfile('spacegg13')">spacegg13</div>
+    </div> <!-- /user-list -->
+
+    <div class="user-details" id="user-details">
+      <div class="detail-card">
+        <h3>유저 정보를 선택하세요.</h3>
+      </div>
+    </div> <!-- /user-details -->
+  </div> <!-- /profile-container -->
+</div> <!-- /tab-profile -->
+
+
+<!-- Tab 3: 상세 내역 -->
+<div class="container" id="tab-details">
+<h2>상세 내역</h2>
+    <div class="month-title">2025년 1월</div>
+    <div class="detail-table-wrapper">
+      <table class="detail-table">
+        <thead>
+    <tr>
+      <th>유저</th>
+      <th>맞힘</th>
+      <th>패널티</th>
+      <th>풀었음</th>
+    <th>24053(2025-01-20)</th><th>12842(2025-01-21)</th></tr></thead>
+        <tbody><tr><td>finalboss_kim</td><td>1</td><td>1</td><td>0</td><td class="cell-penalty">패널티</td><td class="cell-solved">정답</td></tr><tr><td>kzzang131</td><td>2</td><td>0</td><td>0</td><td class="cell-solved">정답</td><td class="cell-solved">정답</td></tr><tr><td>ooo_0502</td><td>1</td><td>1</td><td>0</td><td class="cell-solved">정답</td><td class="cell-penalty">패널티</td></tr><tr><td>spacegg13</td><td>0</td><td>1</td><td>1</td><td class="cell-penalty">패널티</td><td class="cell-attempted">풀이</td></tr></tbody>
+      </table>
+    </div>
+    
+    <div class="detail-table-wrapper">
+      <table class="detail-table">
+        <thead>
+          <tr>
+            <th>등록 날짜</th>
+            <th>문제 번호</th>
+            <th>문제 이름</th>
+            <th>링크</th>
+          </tr>
+        </thead>
+        <tbody>
+    
+        <tr>
+          <td>2025-01-20</td>
+          <td>24053</td>
+          <td>알고리즘 수업 - 삽입 정렬 3</td>
+          <td><a href="https://www.acmicpc.net/problem/24053" target="_blank">https://www.acmicpc.net/problem/24053</a></td>
+        </tr>
+        
+        <tr>
+          <td>2025-01-21</td>
+          <td>12842</td>
+          <td>튀김 소보루</td>
+          <td><a href="https://www.acmicpc.net/problem/12842" target="_blank">https://www.acmicpc.net/problem/12842</a></td>
+        </tr>
+        </tbody></table></div>
+</div>
+
+<script>
+function showTab(tabId){
+  const containers=document.querySelectorAll('.container');
+  containers.forEach(c=>c.classList.remove('active'));
+  const tabs=document.querySelectorAll('.tab');
+  tabs.forEach(t=>t.classList.remove('active'));
+
+  document.getElementById(tabId).classList.add('active');
+  tabs.forEach(tb=>{
+    if(tb.getAttribute('onclick').includes(tabId)){
+      tb.classList.add('active');
+    }
+  });
+}
+// 기본 탭
+showTab('tab-leaderboard');
+
+// 유저 프로필
+let userScoresAll={};
+ userScoresAll['finalboss_kim'] = { solved_count:0, solved_problems:1, penalty:1 };
+ userScoresAll['kzzang131'] = { solved_count:1, solved_problems:2, penalty:0 };
+ userScoresAll['ooo_0502'] = { solved_count:0, solved_problems:1, penalty:1 };
+ userScoresAll['spacegg13'] = { solved_count:0, solved_problems:1, penalty:1 };
+
+function showUserProfile(username){
+  let sc=userScoresAll[username];
+  if(!sc) sc={ solved_count:0, solved_problems:0, penalty:0 };
+
+  const detailsDiv=document.querySelector('#user-details .detail-card');
+  detailsDiv.innerHTML=`
+    <h3>${username} 프로필</h3>
+    <p>맞힌 문제: ${sc.solved_count}, 푼 문제: ${sc.solved_problems}, 패널티: ${sc.penalty}</p>
+  `;
+}
+</script>
+
+</body>
+</html>
