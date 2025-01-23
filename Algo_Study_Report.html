@@ -79,8 +79,17 @@
     <div class="tab" onclick="showTab('profile')">유저 프로필</div>
     <div class="tab" onclick="showTab('details')">상세 내역</div>
 </div>
-<div id="content" class="container active">
-    <!-- 데이터 로드 후 내용 추가 -->
+<div id="leaderboard" class="container active">
+    <h2>순위 & 패널티</h2>
+    <p>데이터 로드 중...</p>
+</div>
+<div id="profile" class="container">
+    <h2>유저 프로필</h2>
+    <p>데이터 로드 중...</p>
+</div>
+<div id="details" class="container">
+    <h2>상세 내역</h2>
+    <p>데이터 로드 중...</p>
 </div>
 
 <script>
@@ -129,6 +138,7 @@ function showTab(tabId) {
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
     document.querySelector(`.tab[onclick="showTab('${tabId}')"]`).classList.add('active');
 }
+
 
 // Load JSON and render content
 loadJsonAndRender();
