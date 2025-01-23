@@ -1,380 +1,125 @@
-
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8">
     <title>Algo Study Report</title>
     <style>
-      body {
-        margin: 0; padding: 0;
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f9; color: #333;
-      }
-      header {
-        background-color: #2a3d66; color: white;
-        padding: 15px; text-align: center;
-      }
-      .tabs {
-        display: flex; justify-content: center;
-        background-color: #2a3d66;
-        border-bottom: 2px solid #ddd;
-      }
-      .tab {
-        padding: 10px 20px; cursor: pointer;
-        color: white; font-size: 18px;
-      }
-      .tab:hover {
-        background-color: #1e2b41;
-      }
-      .tab.active {
-        background-color: #1e2b41;
-        border-bottom: 2px solid white;
-      }
-      .container {
-        padding: 20px; margin-top: 10px;
-        display: none;
-      }
-      .container.active {
-        display: block;
-      }
-      table {
-        width: 100%; border-collapse: collapse;
-        margin-bottom: 20px;
-      }
-      th, td {
-        border: 1px solid #ddd;
-        padding: 8px; text-align: center;
-      }
-      th {
-        background-color: #2a3d66; color: white;
-      }
-      .rank-col { width: 60px; }
-      .user-box {
-        border: 1px solid #ccc;
-        padding: 10px;
-        margin-bottom: 15px;
-        background: #fff;
-      }
-      
-.detail-table-wrapper {
-    width: 100%;
-    overflow-x: auto;
-    margin-bottom: 20px;
-}
-.detail-table {
-    border-collapse: collapse;
-    min-width: 800px;
-}
-.detail-table th, .detail-table td {
-    border: 1px solid #ddd;
-    padding: 8px; text-align: center;
-}
-.detail-table th {
-    background-color: #3c4b7c; color: white;
-}
-.cell-solved {
-    background-color: #d7f8d7; /* 정답=초록 */
-}
-.cell-attempted {
-    background-color: #fff799; /* 풀이=노랑 */
-}
-.cell-penalty {
-    background-color: pink; /* 패널티=핑크 */
-    color: #333;
-}
-.cell-nottried {
-    background-color: #f0f0f0; /* 미시도=회색 */
-    color: #999;
-}
-.month-title {
-    margin-top: 30px;
-    font-size: 20px; font-weight: bold;
-    color: #333;
-}
-
-
-      /* 유저 프로필 탭용 추가 스타일 */
-      .profile-container {
-        display: flex;
-        gap: 20px; 
-      }
-      .user-list {
-        background-color: #fafafa;
-        border: 1px solid #ccc;
-        padding: 15px;
-        width: 200px;
-        border-radius: 6px;
-      }
-      .user-list .list-title {
-        margin-top: 0;
-        font-size: 18px;
-        color: #444;
-      }
-      .user-item {
-        padding: 8px;
-        border-bottom: 1px solid #eee;
-        cursor: pointer;
-        transition: background-color 0.2s ease;
-      }
-      .user-item:hover {
-        background-color: #f0f8ff; /* 살짝 파란 빛 */
-        color: #333;
-      }
-
-      .user-details {
-        flex: 1;
-        min-width: 0;
-      }
-      .detail-card {
-        background-color: #fff;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        padding: 15px;
-        min-height: 250px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      }
-      .detail-card h3 {
-        margin-top: 0;
-      }
-
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #2a3d66;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            background-color: #2a3d66;
+            border-bottom: 2px solid #ddd;
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            color: white;
+            font-size: 18px;
+        }
+        .tab:hover {
+            background-color: #1e2b41;
+        }
+        .tab.active {
+            background-color: #1e2b41;
+            border-bottom: 2px solid white;
+        }
+        .container {
+            padding: 20px;
+            margin-top: 10px;
+            display: none;
+        }
+        .container.active {
+            display: block;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #2a3d66;
+            color: white;
+        }
+        .rank-col {
+            width: 60px;
+        }
     </style>
 </head>
 <body>
-<header><h1>Algo Study Report</h1></header>
-
-<!-- 상단 배너 -->
-<div style="padding: 15px; text-align: center; background-color: #f7f7f7; margin-bottom: 20px; border-bottom: 2px solid #ddd;">
-  <h2 style="margin: 0;">🏆 1위 현황 🏆</h2>
-  <p><strong>🌟 전체 1위:</strong> 741u741 (맞힌:4, 푼:4)</p>
-  <p><strong>📅 이전 달 1위:</strong> 데이터 없음</p>
-  <p><strong>📅 이번 달 1위:</strong> 741u741 (맞힌:4, 푼:4)</p>
+<header>
+    <h1>Algo Study Report</h1>
+</header>
+<div id="top-users" style="padding: 15px; text-align: center; background-color: #f7f7f7; margin-bottom: 20px; border-bottom: 2px solid #ddd;">
+    <h2 style="margin: 0;">🏆 1위 현황 🏆</h2>
+    <p id="all-time-user">🌟 전체 1위: 데이터 로드 중...</p>
+    <p id="previous-month-user">📅 이전 달 1위: 데이터 로드 중...</p>
+    <p id="current-month-user">📅 이번 달 1위: 데이터 로드 중...</p>
 </div>
-
 <div class="tabs">
-  <div class="tab active" onclick="showTab('tab-leaderboard')">순위 & 패널티</div>
-  <div class="tab" onclick="showTab('tab-profile')">유저 프로필</div>
-  <div class="tab" onclick="showTab('tab-details')">상세 내역</div>
+    <div class="tab active" onclick="showTab('leaderboard')">순위 & 패널티</div>
+    <div class="tab" onclick="showTab('profile')">유저 프로필</div>
+    <div class="tab" onclick="showTab('details')">상세 내역</div>
 </div>
-
-<!-- Tab 1: 리더보드 -->
-<div class="container active" id="tab-leaderboard">
-  <h2>리더보드</h2>
-  <table>
-    <thead>
-      <tr>
-        <th class="rank-col">순위</th>
-        <th>유저</th>
-        <th>맞힌 문제</th>
-        <th>푼 문제</th>
-      </tr>
-    </thead>
-    <tbody>
-
-      <tr>
-        <td>1</td>
-        <td>741u741</td>
-        <td>4</td>
-        <td>4</td>
-      </tr>
-
-      <tr>
-        <td>2</td>
-        <td>spacegg13</td>
-        <td>2</td>
-        <td>4</td>
-      </tr>
-
-      <tr>
-        <td>3</td>
-        <td>nes128</td>
-        <td>2</td>
-        <td>3</td>
-      </tr>
-
-      <tr>
-        <td>3</td>
-        <td>finalboss_kim</td>
-        <td>2</td>
-        <td>3</td>
-      </tr>
-
-      <tr>
-        <td>5</td>
-        <td>kzzang131</td>
-        <td>1</td>
-        <td>5</td>
-      </tr>
-
-      <tr>
-        <td>6</td>
-        <td>taroguru</td>
-        <td>1</td>
-        <td>3</td>
-      </tr>
-
-      <tr>
-        <td>7</td>
-        <td>jwchoiii54</td>
-        <td>1</td>
-        <td>2</td>
-      </tr>
-
-      <tr>
-        <td>7</td>
-        <td>inu519</td>
-        <td>1</td>
-        <td>2</td>
-      </tr>
-
-      <tr>
-        <td>9</td>
-        <td>ooo_0502</td>
-        <td>0</td>
-        <td>2</td>
-      </tr>
-
-    </tbody>
-  </table>
-  <h2>패널티보드 (패널티 10 이상)</h2>
-  <table>
-    <thead>
-      <tr>
-        <th class="rank-col">순위</th>
-        <th>유저</th>
-        <th>패널티</th>
-      </tr>
-    </thead>
-    <tbody>
-
-    </tbody>
-  </table>
-</div>
-
-
-<!-- Tab 2: 유저 프로필 -->
-<div class="container" id="tab-profile">
-  <h2 style="text-align:center; margin-bottom:20px;">유저 프로필</h2>
-
-  <div class="profile-container">
-    <div class="user-list" id="user-list">
-      <h3 class="list-title">사용자 목록</h3>
-<div class="user-item" onclick="showUserProfile('741u741')">741u741</div><div class="user-item" onclick="showUserProfile('finalboss_kim')">finalboss_kim</div><div class="user-item" onclick="showUserProfile('inu519')">inu519</div><div class="user-item" onclick="showUserProfile('jwchoiii54')">jwchoiii54</div><div class="user-item" onclick="showUserProfile('kzzang131')">kzzang131</div><div class="user-item" onclick="showUserProfile('nes128')">nes128</div><div class="user-item" onclick="showUserProfile('ooo_0502')">ooo_0502</div><div class="user-item" onclick="showUserProfile('spacegg13')">spacegg13</div><div class="user-item" onclick="showUserProfile('taroguru')">taroguru</div>
-    </div> <!-- /user-list -->
-
-    <div class="user-details" id="user-details">
-      <div class="detail-card">
-        <h3>유저 정보를 선택하세요.</h3>
-      </div>
-    </div> <!-- /user-details -->
-  </div> <!-- /profile-container -->
-</div> <!-- /tab-profile -->
-
-
-<!-- Tab 3: 상세 내역 -->
-<div class="container" id="tab-details">
-<h2>상세 내역</h2>
-    <div class="month-title">2025년 1월</div>
-    <div class="detail-table-wrapper">
-      <table class="detail-table">
-        <thead>
-    <tr>
-      <th>유저</th>
-      <th>맞힘</th>
-      <th>패널티</th>
-      <th>풀었음</th>
-    <th>30406(2025-01-17)</th><th>28075(2025-01-18)</th><th>1198(2025-01-19)</th><th>24053(2025-01-20)</th><th>12842(2025-01-21)</th></tr></thead>
-        <tbody><tr><td>741u741</td><td>4</td><td>1</td><td>0</td><td class="cell-solved">정답</td><td class="cell-solved">정답</td><td class="cell-solved">정답</td><td class="cell-solved">정답</td><td class="cell-penalty">패널티</td></tr><tr><td>finalboss_kim</td><td>3</td><td>2</td><td>0</td><td class="cell-solved">정답</td><td class="cell-nottried">미시도</td><td class="cell-nottried">미시도</td><td class="cell-solved">정답</td><td class="cell-solved">정답</td></tr><tr><td>inu519</td><td>2</td><td>3</td><td>0</td><td class="cell-solved">정답</td><td class="cell-nottried">미시도</td><td class="cell-nottried">미시도</td><td class="cell-solved">정답</td><td class="cell-penalty">패널티</td></tr><tr><td>jwchoiii54</td><td>2</td><td>3</td><td>0</td><td class="cell-solved">정답</td><td class="cell-solved">정답</td><td class="cell-nottried">미시도</td><td class="cell-penalty">패널티</td><td class="cell-penalty">패널티</td></tr><tr><td>kzzang131</td><td>4</td><td>0</td><td>1</td><td class="cell-solved">정답</td><td class="cell-attempted">풀이</td><td class="cell-solved">정답</td><td class="cell-solved">정답</td><td class="cell-solved">정답</td></tr><tr><td>nes128</td><td>3</td><td>2</td><td>0</td><td class="cell-solved">정답</td><td class="cell-solved">정답</td><td class="cell-nottried">미시도</td><td class="cell-solved">정답</td><td class="cell-penalty">패널티</td></tr><tr><td>ooo_0502</td><td>2</td><td>3</td><td>0</td><td class="cell-solved">정답</td><td class="cell-nottried">미시도</td><td class="cell-nottried">미시도</td><td class="cell-solved">정답</td><td class="cell-penalty">패널티</td></tr><tr><td>spacegg13</td><td>3</td><td>1</td><td>1</td><td class="cell-attempted">풀이</td><td class="cell-solved">정답</td><td class="cell-nottried">미시도</td><td class="cell-solved">정답</td><td class="cell-solved">정답</td></tr><tr><td>taroguru</td><td>3</td><td>2</td><td>0</td><td class="cell-solved">정답</td><td class="cell-solved">정답</td><td class="cell-nottried">미시도</td><td class="cell-solved">정답</td><td class="cell-penalty">패널티</td></tr></tbody>
-      </table>
-    </div>
-    
-    <div class="detail-table-wrapper">
-      <table class="detail-table">
-        <thead>
-          <tr>
-            <th>등록 날짜</th>
-            <th>문제 번호</th>
-            <th>문제 이름</th>
-            <th>링크</th>
-          </tr>
-        </thead>
-        <tbody>
-    
-        <tr>
-          <td>2025-01-17</td>
-          <td>30406</td>
-          <td>산타 춘배의 선물 나눠주기</td>
-          <td><a href="https://www.acmicpc.net/problem/30406" target="_blank">https://www.acmicpc.net/problem/30406</a></td>
-        </tr>
-        
-        <tr>
-          <td>2025-01-18</td>
-          <td>28075</td>
-          <td>스파이</td>
-          <td><a href="https://www.acmicpc.net/problem/28075" target="_blank">https://www.acmicpc.net/problem/28075</a></td>
-        </tr>
-        
-        <tr>
-          <td>2025-01-19</td>
-          <td>1198</td>
-          <td>삼각형으로 자르기</td>
-          <td><a href="https://www.acmicpc.net/problem/1198" target="_blank">https://www.acmicpc.net/problem/1198</a></td>
-        </tr>
-        
-        <tr>
-          <td>2025-01-20</td>
-          <td>24053</td>
-          <td>알고리즘 수업 - 삽입 정렬 3</td>
-          <td><a href="https://www.acmicpc.net/problem/24053" target="_blank">https://www.acmicpc.net/problem/24053</a></td>
-        </tr>
-        
-        <tr>
-          <td>2025-01-21</td>
-          <td>12842</td>
-          <td>튀김 소보루</td>
-          <td><a href="https://www.acmicpc.net/problem/12842" target="_blank">https://www.acmicpc.net/problem/12842</a></td>
-        </tr>
-        </tbody></table></div>
+<div id="content" class="container active">
+    <!-- 데이터 로드 후 내용 추가 -->
 </div>
 
 <script>
-function showTab(tabId){
-  const containers=document.querySelectorAll('.container');
-  containers.forEach(c=>c.classList.remove('active'));
-  const tabs=document.querySelectorAll('.tab');
-  tabs.forEach(t=>t.classList.remove('active'));
+async function loadJsonAndRender() {
+    try {
+        const response = await fetch('userdata.json');
+        if (!response.ok) throw new Error('JSON 파일을 로드하는 중 오류 발생.');
+        const data = await response.json();
 
-  document.getElementById(tabId).classList.add('active');
-  tabs.forEach(tb=>{
-    if(tb.getAttribute('onclick').includes(tabId)){
-      tb.classList.add('active');
+        // Update top users section
+        document.getElementById('all-time-user').textContent = `🌟 전체 1위: ${data.top_users.all_time.user} (맞힌: ${data.top_users.all_time.solved_count}, 푼: ${data.top_users.all_time.solved_problems})`;
+        document.getElementById('previous-month-user').textContent = data.top_users.previous_month
+            ? `📅 이전 달 1위: ${data.top_users.previous_month.user} (맞힌: ${data.top_users.previous_month.solved_count}, 푼: ${data.top_users.previous_month.solved_problems})`
+            : '📅 이전 달 1위: 데이터 없음';
+        document.getElementById('current-month-user').textContent = `📅 이번 달 1위: ${data.top_users.current_month.user} (맞힌: ${data.top_users.current_month.solved_count}, 푼: ${data.top_users.current_month.solved_problems})`;
+
+        // Populate leaderboard (example implementation)
+        const sortedScores = Object.entries(data.scores).sort((a, b) => b[1].solved_count - a[1].solved_count);
+        let leaderboardHtml = '<table><thead><tr><th>순위</th><th>유저</th><th>맞힌 문제</th><th>푼 문제</th></tr></thead><tbody>';
+        sortedScores.forEach(([user, score], index) => {
+            leaderboardHtml += `<tr><td>${index + 1}</td><td>${user}</td><td>${score.solved_count}</td><td>${score.solved_problems}</td></tr>`;
+        });
+        leaderboardHtml += '</tbody></table>';
+
+        document.getElementById('content').innerHTML = leaderboardHtml;
+    } catch (error) {
+        console.error('데이터 로드 실패:', error);
+        document.getElementById('content').textContent = '데이터 로드에 실패했습니다.';
     }
-  });
 }
-// 기본 탭
-showTab('tab-leaderboard');
 
-// 유저 프로필
-let userScoresAll={};
- userScoresAll['741u741'] = { solved_count:4, solved_problems:4, penalty:1 };
- userScoresAll['finalboss_kim'] = { solved_count:2, solved_problems:3, penalty:0 };
- userScoresAll['inu519'] = { solved_count:1, solved_problems:2, penalty:1 };
- userScoresAll['jwchoiii54'] = { solved_count:1, solved_problems:2, penalty:2 };
- userScoresAll['kzzang131'] = { solved_count:1, solved_problems:5, penalty:0 };
- userScoresAll['nes128'] = { solved_count:2, solved_problems:3, penalty:1 };
- userScoresAll['ooo_0502'] = { solved_count:0, solved_problems:2, penalty:1 };
- userScoresAll['spacegg13'] = { solved_count:2, solved_problems:4, penalty:0 };
- userScoresAll['taroguru'] = { solved_count:1, solved_problems:3, penalty:1 };
-
-function showUserProfile(username){
-  let sc=userScoresAll[username];
-  if(!sc) sc={ solved_count:0, solved_problems:0, penalty:0 };
-
-  const detailsDiv=document.querySelector('#user-details .detail-card');
-  detailsDiv.innerHTML=`
-    <h3>${username} 프로필</h3>
-    <p>맞힌 문제: ${sc.solved_count}, 푼 문제: ${sc.solved_problems}, 패널티: ${sc.penalty}</p>
-  `;
+function showTab(tabId) {
+    document.querySelectorAll('.container').forEach(c => c.classList.remove('active'));
+    document.querySelector(`#${tabId}`).classList.add('active');
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    event.target.classList.add('active');
 }
+
+// Load JSON and render content
+loadJsonAndRender();
 </script>
-
 </body>
 </html>

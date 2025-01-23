@@ -1,0 +1,153 @@
+{
+    "problems": {
+        "24053": {
+            "name": "알고리즘 수업 - 삽입 정렬 3",
+            "listed_date": "2025-01-20",
+            "is_holiday": false
+        },
+        "1198": {
+            "name": "삼각형으로 자르기",
+            "listed_date": "2025-01-19",
+            "is_holiday": true
+        },
+        "28075": {
+            "name": "스파이",
+            "listed_date": "2025-01-18",
+            "is_holiday": true
+        },
+        "30406": {
+            "name": "산타 춘배의 선물 나눠주기",
+            "listed_date": "2025-01-17",
+            "is_holiday": false
+        },
+        "12842": {
+            "name": "튀김 소보루",
+            "listed_date": "2025-01-21",
+            "is_holiday": false
+        }
+    },
+    "user_problem_matrix": {
+        "741u741": {
+            "30406": 1.0,
+            "28075": 1.0,
+            "1198": 1.0,
+            "24053": 1.0,
+            "12842": null
+        },
+        "finalboss_kim": {
+            "30406": 1.0,
+            "28075": null,
+            "1198": null,
+            "24053": 1.0,
+            "12842": 0.0
+        },
+        "inu519": {
+            "30406": 0.0,
+            "28075": null,
+            "1198": null,
+            "24053": 1.0,
+            "12842": null
+        },
+        "jwchoiii54": {
+            "30406": 0.0,
+            "28075": 1.0,
+            "1198": null,
+            "24053": null,
+            "12842": null
+        },
+        "kzzang131": {
+            "30406": 0.0,
+            "28075": 0.0,
+            "1198": 0.0,
+            "24053": 1.0,
+            "12842": 0.0
+        },
+        "nes128": {
+            "30406": 1.0,
+            "28075": 0.0,
+            "1198": null,
+            "24053": 1.0,
+            "12842": null
+        },
+        "ooo_0502": {
+            "30406": 0.0,
+            "28075": null,
+            "1198": null,
+            "24053": 0.0,
+            "12842": null
+        },
+        "spacegg13": {
+            "30406": 0.0,
+            "28075": 1.0,
+            "1198": null,
+            "24053": 1.0,
+            "12842": 0.0
+        },
+        "taroguru": {
+            "30406": 0.0,
+            "28075": 0.0,
+            "1198": null,
+            "24053": 1.0,
+            "12842": null
+        }
+    },
+    "scores": {
+        "741u741": {
+            "solved_count": 4,
+            "solved_problems": 4,
+            "penalty": 0
+        },
+        "finalboss_kim": {
+            "solved_count": 2,
+            "solved_problems": 3,
+            "penalty": 1
+        },
+        "inu519": {
+            "solved_count": 1,
+            "solved_problems": 2,
+            "penalty": 1
+        },
+        "jwchoiii54": {
+            "solved_count": 1,
+            "solved_problems": 2,
+            "penalty": 1
+        },
+        "kzzang131": {
+            "solved_count": 1,
+            "solved_problems": 5,
+            "penalty": 2
+        },
+        "nes128": {
+            "solved_count": 2,
+            "solved_problems": 3,
+            "penalty": 0
+        },
+        "ooo_0502": {
+            "solved_count": 0,
+            "solved_problems": 2,
+            "penalty": 2
+        },
+        "spacegg13": {
+            "solved_count": 2,
+            "solved_problems": 4,
+            "penalty": 2
+        },
+        "taroguru": {
+            "solved_count": 1,
+            "solved_problems": 3,
+            "penalty": 1
+        }
+    },
+    "top_users": {
+        "current_month": {
+            "user": "741u741",
+            "solved_count": 4,
+            "solved_problems": 4
+        },
+        "all_time": {
+            "user": "741u741",
+            "solved_count": 4,
+            "solved_problems": 4
+        }
+    }
+}
