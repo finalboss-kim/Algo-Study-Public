@@ -5,69 +5,130 @@
     <title>Algo Study Report</title>
     <style>
         body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
+        margin: 0; padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9; color: #333;
         }
         header {
-            background-color: #2a3d66;
-            color: white;
-            text-align: center;
-            padding: 15px;
+        background-color: #2a3d66; color: white;
+        padding: 15px; text-align: center;
         }
         .tabs {
-            display: flex;
-            justify-content: center;
-            background-color: #2a3d66;
-            border-bottom: 2px solid #ddd;
+        display: flex; justify-content: center;
+        background-color: #2a3d66;
+        border-bottom: 2px solid #ddd;
         }
         .tab {
-            padding: 10px 20px;
-            cursor: pointer;
-            color: white;
-            font-size: 18px;
+        padding: 10px 20px; cursor: pointer;
+        color: white; font-size: 18px;
         }
         .tab:hover {
-            background-color: #1e2b41;
+        background-color: #1e2b41;
         }
         .tab.active {
-            background-color: #1e2b41;
-            border-bottom: 2px solid white;
+        background-color: #1e2b41;
+        border-bottom: 2px solid white;
         }
         .container {
-            padding: 20px;
-            margin-top: 10px;
-            display: none;
+        padding: 20px; margin-top: 10px;
+        display: none;
         }
         .container.active {
-            display: block;
+        display: block;
         }
         table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
+        width: 100%; border-collapse: collapse;
+        margin-bottom: 20px;
         }
         th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: center;
+        border: 1px solid #ddd;
+        padding: 8px; text-align: center;
         }
         th {
-            background-color: #2a3d66;
-            color: white;
+        background-color: #2a3d66; color: white;
         }
-        .rank-col {
-            width: 60px;
+        .rank-col { width: 60px; }
+        .user-box {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 15px;
+        background: #fff;
+        }
+        .detail-table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+        margin-bottom: 20px;
+        }
+        .detail-table {
+        border-collapse: collapse;
+        min-width: 800px;
+        }
+        .detail-table th, .detail-table td {
+        border: 1px solid #ddd;
+        padding: 8px; text-align: center;
+        }
+        .detail-table th {
+        background-color: #3c4b7c; color: white;
+        }
+        .cell-solved {
+        background-color: #d7f8d7; /* 정답=초록 */
+        }
+        .cell-attempted {
+        background-color: #fff799; /* 풀이=노랑 */
+        }
+        .cell-penalty {
+        background-color: pink; /* 패널티=핑크 */
+        color: #333;
+        }
+        .cell-nottried {
+        background-color: #f0f0f0; /* 미시도=회색 */
+        color: #999;
+        }
+        .month-title {
+        margin-top: 30px;
+        font-size: 20px; font-weight: bold;
+        color: #333;
+        }
+        .profile-container {
+        display: flex;
+        gap: 20px; 
+        }
+        .user-list {
+        background-color: #fafafa;
+        border: 1px solid #ccc;
+        padding: 15px;
+        width: 200px;
+        border-radius: 6px;
+        }
+        .user-list .list-title {
+        margin-top: 0;
+        font-size: 18px;
+        color: #444;
         }
         .user-item {
-            cursor: pointer;
-            padding: 8px;
-            border-bottom: 1px solid #ddd;
+        padding: 8px;
+        border-bottom: 1px solid #eee;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
         }
         .user-item:hover {
-            background-color: #f0f0f0;
+        background-color: #f0f8ff; /* 살짝 파란 빛 */
+        color: #333;
+        }
+        .user-details {
+        flex: 1;
+        min-width: 0;
+        }
+        .detail-card {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        padding: 15px;
+        min-height: 250px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .detail-card h3 {
+        margin-top: 0;
         }
     </style>
 </head>
@@ -126,21 +187,11 @@
         </div>
     </div>
 </div>
-<div id="details" class="container">
+<div id="details" class="container active">
     <h2>상세 내역</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>유저</th>
-                <th>맞힘</th>
-                <th>패널티</th>
-                <th>풀었음</th>
-            </tr>
-        </thead>
-        <tbody id="details-content">
-            <!-- 동적 데이터 추가 -->
-        </tbody>
-    </table>
+    <div id="monthly-tables">
+        <!-- 동적 데이터 추가 -->
+    </div>
 </div>
 <script>
     async function loadJsonAndRender() {
@@ -193,8 +244,11 @@
                 leaderboardHtml += `<tr><td>${index + 1}</td><td>${user}</td><td>${score.solved_count}</td><td>${score.solved_problems}</td></tr>`;
             });
             document.getElementById('leaderboard-content').innerHTML = leaderboardHtml;
-
+            
             console.log('리더보드 업데이트 완료');
+
+            renderMonthlyDetails(data);
+
         } catch (error) {
             console.error('데이터 로드 실패:', error);
             document.getElementById('leaderboard-content').innerHTML = '<tr><td colspan="4">데이터 로드 실패</td></tr>';
@@ -221,12 +275,10 @@
         document.getElementById('profile-penalty').textContent = userData.penalty;
         document.getElementById('profile-attempted').textContent = userData.solved_problems;
 
-        console.log('프로필 기본정보 업데이트 완료');
-        
         console.log('username:', username);
-        console.log('userProblemMatrix:', userProblemMatrix);
+        console.log('userData:', userData);
         console.log('problems:', problems);
-        console.log('현재 유저 문제 데이터:', userProblemMatrix);
+        console.log('userProblemMatrix:', userProblemMatrix);
 
         // 맞춘 문제 목록
         const matchedProblems = Object.entries(userProblems)
@@ -237,9 +289,9 @@
         if (solvedList) solvedList.textContent = matchedProblems || '-';
 
         // 푼 문제 목록
-        const attemptedProblems = Object.keys(userProblems)
+        const attemptedProblems = Object.entries(userProblems)
             .filter(([_, score]) => score !== -1.0)
-            .map(id => id.toString())
+            .map(([id]) => id.toString())
             .join(', ');
         const attemptedList = document.getElementById('attempted-list');
         if (attemptedList) attemptedList.textContent = attemptedProblems || '-';
@@ -259,8 +311,6 @@
             .join(', ');
         const holidayList = document.getElementById('holiday-problems');
         if (holidayList) holidayList.textContent = holidayProblems || '-';
-
-        console.log('프로필 문제정보 업데이트 완료');
         
         // 1~3등 정보 추가
         const rankedMonths = userData.ranked_months || [];
@@ -285,6 +335,72 @@
                 rankIconsContainer.appendChild(icon);
             });
         }
+    }
+
+
+    function renderMonthlyDetails(data) {
+        const monthlyTables = document.getElementById('monthly-tables');
+        if (!monthlyTables) {
+            console.error('monthly-tables element not found!');
+            return;
+        }
+        monthlyTables.innerHTML = '';
+
+        const problemIds = Object.keys(data.problems).sort((a, b) => {
+            const dateA = new Date(data.problems[a].listed_date);
+            const dateB = new Date(data.problems[b].listed_date);
+            return dateA - dateB; // 오름차순 정렬
+        });
+        const monthTable = document.createElement('div');
+        let tableHtml = '<table><thead><tr><th>유저</th><th>맞힌 문제</th><th>패널티</th><th>푼 문제</th>';
+
+        // 문제 번호 열 추가
+        problemIds.forEach(problemId => {
+            tableHtml += `<th>${problemId}</th>`;
+        });
+        tableHtml += '</tr></thead><tbody>';
+
+        console.log('상세 표 구조생성');
+
+        // 유저별 데이터 렌더링
+        Object.keys(data.user_problem_matrix).forEach(user => {
+            const userData = data.scores[user];
+            const userProblems = data.user_problem_matrix[user];
+
+            console.log('상세 표 유저', userData);
+            console.log('상세 표 점수', userProblems);
+
+            tableHtml += `<tr><td>${user}</td>`;
+            tableHtml += `<td>${userData.solved_count}</td>`;
+            tableHtml += `<td>${userData.penalty}</td>`;
+            tableHtml += `<td>${userData.solved_problems}</td>`;
+
+            // 문제 상태 렌더링
+            problemIds.forEach(problemId => {
+                const status = userProblems[problemId] || -1; // 기본값 -1 (미풀이)
+                let cellClass = 'cell-nottried';
+                let cellText = '미풀이';
+
+                if (status === 1.0) {
+                    cellClass = 'cell-solved';
+                    cellText = '맞춤';
+                } else if (status === 0.0) {
+                    cellClass = 'cell-attempted';
+                    cellText = '풀었음';
+                } else if (status === -1.0 && !data.problems[problemId].is_holiday) {
+                    cellClass = 'cell-penalty';
+                    cellText = '패널티';
+                }
+
+                tableHtml += `<td class="${cellClass}">${cellText}</td>`;
+            });
+
+            tableHtml += '</tr>';
+        });
+
+        tableHtml += '</tbody></table>';
+        monthTable.innerHTML = tableHtml;
+        monthlyTables.appendChild(monthTable);
     }
 
 
