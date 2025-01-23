@@ -72,6 +72,7 @@
     <p id="all-time-user">🌟 전체 1위: 데이터 로드 중...</p>
     <p id="previous-month-user">📅 이전 달 1위: 데이터 로드 중...</p>
     <p id="current-month-user">📅 이번 달 1위: 데이터 로드 중...</p>
+    <p id="last-update" style="margin-top: 10px; color: #666; font-size: 14px;">업데이트 시각: 데이터 로드 중...</p>
 </div>
 <div class="tabs">
     <div class="tab active" onclick="showTab('leaderboard')">순위 & 패널티</div>
@@ -95,6 +96,9 @@ async function loadJsonAndRender() {
             ? `📅 이전 달 1위: ${data.top_users.previous_month.user} (맞힌: ${data.top_users.previous_month.solved_count}, 푼: ${data.top_users.previous_month.solved_problems})`
             : '📅 이전 달 1위: 데이터 없음';
         document.getElementById('current-month-user').textContent = `📅 이번 달 1위: ${data.top_users.current_month.user} (맞힌: ${data.top_users.current_month.solved_count}, 푼: ${data.top_users.current_month.solved_problems})`;
+
+        // Update last update timestamp
+        document.getElementById('last-update').textContent = `업데이트 시각: ${data.last_update}`;
 
         // Populate leaderboard (example implementation)
         const sortedScores = Object.entries(data.scores).sort((a, b) => b[1].solved_count - a[1].solved_count);
