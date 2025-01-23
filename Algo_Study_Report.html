@@ -61,6 +61,14 @@
         .rank-col {
             width: 60px;
         }
+        .user-item {
+            cursor: pointer;
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        .user-item:hover {
+            background-color: #f0f0f0;
+        }
     </style>
 </head>
 <body>
@@ -97,9 +105,19 @@
 </div>
 <div id="profile" class="container">
     <h2>유저 프로필</h2>
-    <ul id="profile-content">
-        <!-- 동적 데이터 추가 -->
-    </ul>
+    <div style="display: flex;">
+        <div style="width: 25%;">
+            <ul id="profile-user-list" style="list-style: none; padding: 0;">
+                <!-- 유저 목록 동적 렌더링 -->
+            </ul>
+        </div>
+        <div style="flex: 1; padding-left: 20px;">
+            <h3 id="profile-username">유저 선택</h3>
+            <p><strong>맞힌 문제:</strong> <span id="profile-solved">-</span></p>
+            <p><strong>패널티:</strong> <span id="profile-penalty">-</span></p>
+            <p><strong>푼 문제:</strong> <span id="profile-attempted">-</span></p>
+        </div>
+    </div>
 </div>
 <div id="details" class="container">
     <h2>상세 내역</h2>
@@ -126,6 +144,21 @@ async function loadJsonAndRender() {
         }
         const data = await response.json();
 
+        // 1위 현황 업데이트
+        const allTimeUser = data.top_users.all_time;
+        const previousMonthUser = data.top_users.previous_month;
+        const currentMonthUser = data.top_users.current_month;
+
+        document.getElementById('all-time-user').textContent =
+            `🌟 전체 1위: ${allTimeUser.user} (맞힌: ${allTimeUser.solved_count}, 푼: ${allTimeUser.solved_problems})`;
+
+        document.getElementById('previous-month-user').textContent = previousMonthUser
+            ? `📅 이전 달 1위: ${previousMonthUser.user} (맞힌: ${previousMonthUser.solved_count}, 푼: ${previousMonthUser.solved_problems})`
+            : '📅 이전 달 1위: 데이터 없음';
+
+        document.getElementById('current-month-user').textContent =
+            `📅 이번 달 1위: ${currentMonthUser.user} (맞힌: ${currentMonthUser.solved_count}, 푼: ${currentMonthUser.solved_problems})`;
+
         // Leaderboard 업데이트
         const sortedScores = Object.entries(data.scores).sort((a, b) => b[1].solved_count - a[1].solved_count);
         let leaderboardHtml = '';
@@ -134,12 +167,16 @@ async function loadJsonAndRender() {
         });
         document.getElementById('leaderboard-content').innerHTML = leaderboardHtml;
 
-        // Profile 업데이트
-        let profileHtml = '';
+        // Profile 유저 목록 업데이트
+        const profileUserList = document.getElementById('profile-user-list');
+        profileUserList.innerHTML = '';
         Object.keys(data.scores).forEach(user => {
-            profileHtml += `<li>${user}</li>`;
+            const li = document.createElement('li');
+            li.textContent = user;
+            li.className = 'user-item';
+            li.onclick = () => renderUserProfile(user, data.scores[user]);
+            profileUserList.appendChild(li);
         });
-        document.getElementById('profile-content').innerHTML = profileHtml;
 
         // Details 업데이트
         let detailsHtml = '';
@@ -153,25 +190,4 @@ async function loadJsonAndRender() {
     } catch (error) {
         console.error('데이터 로드 실패:', error);
         document.getElementById('leaderboard-content').innerHTML = '<tr><td colspan="4">데이터 로드 실패</td></tr>';
-        document.getElementById('profile-content').textContent = '데이터 로드 실패';
-        document.getElementById('details-content').innerHTML = '<tr><td colspan="4">데이터 로드 실패</td></tr>';
-    }
-}
-
-function showTab(tabId) {
-    // 모든 컨테이너 숨기기
-    document.querySelectorAll('.container').forEach(c => c.classList.remove('active'));
-    // 선택된 컨테이너만 활성화
-    document.getElementById(tabId).classList.add('active');
-
-    // 모든 탭 비활성화
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-    // 클릭된 탭 활성화
-    document.querySelector(`.tab[onclick="showTab('${tabId}')"]`).classList.add('active');
-}
-
-// JSON 데이터 로드 및 렌더링
-loadJsonAndRender();
-</script>
-</body>
-</html>
+        document.getElementById('profile-user-list').textContent = '데이터 로드
