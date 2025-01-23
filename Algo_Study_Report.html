@@ -87,8 +87,15 @@
 async function loadJsonAndRender() {
     try {
         const response = await fetch('userdata.json');
-        if (!response.ok) throw new Error('JSON 파일을 로드하는 중 오류 발생.');
+        if (!response.ok) {
+            throw new Error(`HTTP 오류: ${response.status}`);
+        }
         const data = await response.json();
+
+        // JSON 데이터 유효성 확인
+        if (!data || !data.top_users || !data.scores) {
+            throw new Error('JSON 데이터가 올바르지 않습니다.');
+        }
 
         // Update top users section
         document.getElementById('all-time-user').textContent = `🌟 전체 1위: ${data.top_users.all_time.user} (맞힌: ${data.top_users.all_time.solved_count}, 푼: ${data.top_users.all_time.solved_problems})`;
@@ -98,7 +105,7 @@ async function loadJsonAndRender() {
         document.getElementById('current-month-user').textContent = `📅 이번 달 1위: ${data.top_users.current_month.user} (맞힌: ${data.top_users.current_month.solved_count}, 푼: ${data.top_users.current_month.solved_problems})`;
 
         // Update last update timestamp
-        document.getElementById('last-update').textContent = `업데이트 시각: ${data.last_update}`;
+        document.getElementById('last-update').textContent = `업데이트 시각: ${data.last_update || '데이터 없음'}`;
 
         // Populate leaderboard (example implementation)
         const sortedScores = Object.entries(data.scores).sort((a, b) => b[1].solved_count - a[1].solved_count);
@@ -108,7 +115,8 @@ async function loadJsonAndRender() {
         });
         leaderboardHtml += '</tbody></table>';
 
-        document.getElementById('content').innerHTML = leaderboardHtml;
+        document.getElementById('leaderboard').innerHTML = leaderboardHtml;
+
     } catch (error) {
         console.error('데이터 로드 실패:', error);
         document.getElementById('content').textContent = '데이터 로드에 실패했습니다.';
@@ -117,9 +125,9 @@ async function loadJsonAndRender() {
 
 function showTab(tabId) {
     document.querySelectorAll('.container').forEach(c => c.classList.remove('active'));
-    document.querySelector(`#${tabId}`).classList.add('active');
+    document.getElementById(tabId).classList.add('active');
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-    event.target.classList.add('active');
+    document.querySelector(`.tab[onclick="showTab('${tabId}')"]`).classList.add('active');
 }
 
 // Load JSON and render content
