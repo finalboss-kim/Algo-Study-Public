@@ -212,15 +212,28 @@ function renderUserProfile(username, userData) {
 }
 
 function showTab(tabId) {
+    console.log(`Activating tab: ${tabId}`);
     document.querySelectorAll('.container').forEach(c => c.classList.remove('active'));
-    document.getElementById(tabId).classList.add('active');
+    const targetContainer = document.getElementById(tabId);
+    if (targetContainer) {
+        targetContainer.classList.add('active');
+    } else {
+        console.error(`Tab container with id "${tabId}" not found.`);
+    }
 
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-    document.querySelector(`.tab[onclick="showTab('${tabId}')"]`).classList.add('active');
+    const activeTab = document.querySelector(`.tab[onclick="showTab('${tabId}')"]`);
+    if (activeTab) {
+        activeTab.classList.add('active');
+    } else {
+        console.error(`Tab with onclick "showTab('${tabId}')" not found.`);
+    }
 }
 
+console.log('스크립트 로드 완료');
 // JSON 데이터 로드 및 렌더링 실행
 loadJsonAndRender();
+console.log('스크립트 종료');
 </script>
 </body>
 </html>
