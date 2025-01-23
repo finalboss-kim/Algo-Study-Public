@@ -116,6 +116,13 @@
             <p><strong>맞힌 문제:</strong> <span id="profile-solved">-</span></p>
             <p><strong>패널티:</strong> <span id="profile-penalty">-</span></p>
             <p><strong>푼 문제:</strong> <span id="profile-attempted">-</span></p>
+            <h3>상세 정보</h3>
+            <ul>
+                <li><strong>맞춘 문제 목록:</strong> <span id="solved-list">-</span></li>
+                <li><strong>푼 문제 목록:</strong> <span id="attempted-list">-</span></li>
+                <li><strong>패널티 문제 목록:</strong> <span id="penalty-problems">-</span></li>
+                <li><strong>안 푼 휴일 문제 목록:</strong> <span id="holiday-problems">-</span></li>
+            </ul>
         </div>
     </div>
 </div>
@@ -164,16 +171,19 @@
             console.log('상단 업데이트 완료');
 
             // 유저 목록 업데이트
-            const userListContent = document.getElementById('user-list-content');
-            userListContent.innerHTML = '';
+            const profileUserList = document.getElementById('profile-user-list');
+            if (!profileUserList) {
+                console.error('유저 목록 컨테이너가 존재하지 않습니다.');
+                return;
+            }
+            profileUserList.innerHTML = '';
             Object.keys(data.scores).forEach(user => {
-                const div = document.createElement('div');
-                div.className = 'user-item';
-                div.textContent = user;
-                div.onclick = () => renderUserProfile(user, data.scores[user], data.problems);
-                userListContent.appendChild(div);
+                const li = document.createElement('li');
+                li.className = 'user-item';
+                li.textContent = user;
+                li.onclick = () => renderUserProfile(user, data.scores[user], data.problems, data.user_problem_matrix[user]);
+                profileUserList.appendChild(li);
             });
-
             console.log('유저 목록 업데이트 완료');
 
             // 리더보드 업데이트
@@ -188,31 +198,103 @@
         } catch (error) {
             console.error('데이터 로드 실패:', error);
             document.getElementById('leaderboard-content').innerHTML = '<tr><td colspan="4">데이터 로드 실패</td></tr>';
-            document.getElementById('user-list-content').textContent = '데이터 로드 실패';
+            document.getElementById('profile-user-list').textContent = '데이터 로드 실패';
         }
     }
 
-    function renderUserProfile(username, userData, problems) {
+    function renderUserProfile(username, userData, problems, userProblemMatrix) {
+        if (!problems || typeof problems !== 'object') {
+            console.error('유효하지 않은 problems 데이터입니다:', problems);
+            return;
+        }
+        if (!userProblemMatrix || typeof userProblemMatrix !== 'object') {
+            console.error('유효하지 않은 user_problem_matrix 데이터입니다:', userProblemMatrix);
+            return;
+        }
+
+        // 유저별 문제 데이터 추출
+        const userProblems = userProblemMatrix || {};
+
+        // 기본 정보 업데이트
         document.getElementById('profile-username').textContent = username;
         document.getElementById('profile-solved').textContent = userData.solved_count;
         document.getElementById('profile-penalty').textContent = userData.penalty;
         document.getElementById('profile-attempted').textContent = userData.solved_problems;
 
-        // 1~3등 정보 추가
-        const rankedMonths = userData.ranked_months.map(r => `${r.month} ${r.rank}등`).join(', ');
-        document.getElementById('solved-list').textContent = rankedMonths;
+        console.log('프로필 기본정보 업데이트 완료');
+        
+        console.log('username:', username);
+        console.log('userProblemMatrix:', userProblemMatrix);
+        console.log('problems:', problems);
+        console.log('현재 유저 문제 데이터:', userProblemMatrix);
+
+        // 맞춘 문제 목록
+        const matchedProblems = Object.entries(userProblems)
+            .filter(([_, score]) => score === 1.0)
+            .map(([id]) => id.toString())
+            .join(', ');
+        const solvedList = document.getElementById('solved-list');
+        if (solvedList) solvedList.textContent = matchedProblems || '-';
+
+        // 푼 문제 목록
+        const attemptedProblems = Object.keys(userProblems)
+            .filter(([_, score]) => score !== -1.0)
+            .map(id => id.toString())
+            .join(', ');
+        const attemptedList = document.getElementById('attempted-list');
+        if (attemptedList) attemptedList.textContent = attemptedProblems || '-';
 
         // 패널티 문제 목록
-        const penaltyProblems = Object.entries(problems)
-            .filter(([_, problem]) => problem.is_holiday === false)
-            .map(([id, _]) => id).join(', ');
-        document.getElementById('penalty-problems').textContent = penaltyProblems;
+        const penaltyProblems = Object.entries(userProblems)
+            .filter(([id, score]) => score === -1.0 && !problems[id]?.is_holiday)
+            .map(([id]) => id.toString())
+            .join(', ');
+        const penaltyList = document.getElementById('penalty-problems');
+        if (penaltyList) penaltyList.textContent = penaltyProblems || '-';
 
-        // 휴일 문제 목록
-        const holidayProblems = Object.entries(problems)
-            .filter(([_, problem]) => problem.is_holiday === true)
-            .map(([id, _]) => id).join(', ');
-        document.getElementById('holiday-problems').textContent = holidayProblems;
+        // 안 푼 휴일 문제 목록
+        const holidayProblems = Object.entries(userProblems)
+            .filter(([id, score]) => score === -1.0 && problems[id]?.is_holiday)
+            .map(([id]) => id.toString())
+            .join(', ');
+        const holidayList = document.getElementById('holiday-problems');
+        if (holidayList) holidayList.textContent = holidayProblems || '-';
+
+        console.log('프로필 문제정보 업데이트 완료');
+        
+        // 1~3등 정보 추가
+        const rankedMonths = userData.ranked_months || [];
+        const rankIconsContainer = document.getElementById('rank-icons');
+        if (rankIconsContainer) {
+            rankIconsContainer.innerHTML = '';
+            rankedMonths.forEach(rank => {
+                const icon = document.createElement('span');
+                let iconText, color;
+                switch (rank.rank) {
+                    case 1: iconText = '🥇'; color = 'gold'; break;
+                    case 2: iconText = '🥈'; color = 'silver'; break;
+                    case 3: iconText = '🥉'; color = '#cd7f32'; break;
+                    default: iconText = '🏅'; color = 'gray';
+                }
+
+                icon.textContent = iconText;
+                icon.title = `${rank.month} ${rank.rank}등`; // 툴팁
+                icon.style.marginRight = '5px';
+                icon.style.color = color;
+                icon.style.fontSize = '1.5em';
+                rankIconsContainer.appendChild(icon);
+            });
+        }
+    }
+
+
+
+    function showTab(tabId) {
+        document.querySelectorAll('.container').forEach(c => c.classList.remove('active'));
+        document.getElementById(tabId).classList.add('active');
+
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.querySelector(`.tab[onclick="showTab('${tabId}')"]`).classList.add('active');
     }
 
     loadJsonAndRender();

@@ -32,28 +32,28 @@
             "28075": 1.0,
             "1198": 1.0,
             "24053": 1.0,
-            "12842": null
+            "12842": -1.0
         },
         "finalboss_kim": {
             "30406": 1.0,
-            "28075": null,
-            "1198": null,
+            "28075": -1.0,
+            "1198": -1.0,
             "24053": 1.0,
             "12842": 0.0
         },
         "inu519": {
             "30406": 0.0,
-            "28075": null,
-            "1198": null,
+            "28075": -1.0,
+            "1198": -1.0,
             "24053": 1.0,
-            "12842": null
+            "12842": -1.0
         },
         "jwchoiii54": {
             "30406": 0.0,
             "28075": 1.0,
-            "1198": null,
-            "24053": null,
-            "12842": null
+            "1198": -1.0,
+            "24053": -1.0,
+            "12842": -1.0
         },
         "kzzang131": {
             "30406": 0.0,
@@ -65,77 +65,86 @@
         "nes128": {
             "30406": 1.0,
             "28075": 0.0,
-            "1198": null,
+            "1198": -1.0,
             "24053": 1.0,
-            "12842": null
+            "12842": -1.0
         },
         "ooo_0502": {
             "30406": 0.0,
-            "28075": null,
-            "1198": null,
+            "28075": -1.0,
+            "1198": -1.0,
             "24053": 0.0,
-            "12842": null
+            "12842": -1.0
         },
         "spacegg13": {
             "30406": 0.0,
             "28075": 1.0,
-            "1198": null,
+            "1198": -1.0,
             "24053": 1.0,
             "12842": 0.0
         },
         "taroguru": {
             "30406": 0.0,
             "28075": 0.0,
-            "1198": null,
+            "1198": -1.0,
             "24053": 1.0,
-            "12842": null
+            "12842": -1.0
         }
     },
     "scores": {
         "741u741": {
             "solved_count": 4,
             "solved_problems": 4,
-            "penalty": 0
+            "penalty": 0,
+            "ranked_months": []
         },
         "finalboss_kim": {
             "solved_count": 2,
             "solved_problems": 3,
-            "penalty": 1
+            "penalty": 1,
+            "ranked_months": []
         },
         "inu519": {
             "solved_count": 1,
             "solved_problems": 2,
-            "penalty": 1
+            "penalty": 1,
+            "ranked_months": []
         },
         "jwchoiii54": {
             "solved_count": 1,
             "solved_problems": 2,
-            "penalty": 1
+            "penalty": 1,
+            "ranked_months": []
         },
         "kzzang131": {
             "solved_count": 1,
             "solved_problems": 5,
-            "penalty": 2
+            "penalty": 2,
+            "ranked_months": []
         },
         "nes128": {
             "solved_count": 2,
             "solved_problems": 3,
-            "penalty": 0
+            "penalty": 0,
+            "ranked_months": []
         },
         "ooo_0502": {
             "solved_count": 0,
             "solved_problems": 2,
-            "penalty": 2
+            "penalty": 2,
+            "ranked_months": []
         },
         "spacegg13": {
             "solved_count": 2,
             "solved_problems": 4,
-            "penalty": 2
+            "penalty": 2,
+            "ranked_months": []
         },
         "taroguru": {
             "solved_count": 1,
             "solved_problems": 3,
-            "penalty": 1
+            "penalty": 1,
+            "ranked_months": []
         }
     },
     "top_users": {
@@ -150,5 +159,5 @@
             "solved_problems": 4
         }
     },
-    "last_update": "2025-01-23 10:23:01"
+    "last_update": "2025-01-23 11:15:49"
 }
