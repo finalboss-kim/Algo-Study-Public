@@ -86,7 +86,7 @@
 <script>
 async function loadJsonAndRender() {
     try {
-        const response = await fetch('userdata.json');
+        const response = await fetch('https://username.github.io/repository-name/userdata.json');
         if (!response.ok) {
             throw new Error(`HTTP 오류: ${response.status}`);
         }
