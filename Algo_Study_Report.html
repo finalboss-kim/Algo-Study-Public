@@ -136,104 +136,87 @@
     </table>
 </div>
 <script>
-async function loadJsonAndRender() {
-    try {
-        console.log('스크립트 실행 시작');
-        const response = await fetch('https://finalboss-kim.github.io/Algo-Study-Public/userdata.json');
-        if (!response.ok) {
-            throw new Error(`HTTP 오류: ${response.status}`);
+    async function loadJsonAndRender() {
+        try {
+            console.log('스크립트 실행 시작');
+            const response = await fetch('https://finalboss-kim.github.io/Algo-Study-Public/userdata.json');
+            if (!response.ok) {
+                throw new Error(`HTTP 오류: ${response.status}`);
+            }
+            const data = await response.json();
+            console.log('JSON 데이터:', data);
+    
+            // 상단 1위 현황 업데이트
+            const allTimeUser = data.top_users.all_time;
+            const previousMonthUser = data.top_users.previous_month;
+            const currentMonthUser = data.top_users.current_month;
+    
+            document.getElementById('all-time-user').textContent =
+                `🌟 전체 1위: ${allTimeUser.user} (맞힌: ${allTimeUser.solved_count}, 푼: ${allTimeUser.solved_problems})`;
+    
+            document.getElementById('previous-month-user').textContent = previousMonthUser
+                ? `📅 이전 달 1위: ${previousMonthUser.user} (맞힌: ${previousMonthUser.solved_count}, 푼: ${previousMonthUser.solved_problems})`
+                : '📅 이전 달 1위: 데이터 없음';
+    
+            document.getElementById('current-month-user').textContent =
+                `📅 이번 달 1위: ${currentMonthUser.user} (맞힌: ${currentMonthUser.solved_count}, 푼: ${currentMonthUser.solved_problems})`;
+    
+            console.log('상단 업데이트 완료');
+    
+            // 유저 목록 업데이트
+            const userListContent = document.getElementById('user-list-content');
+            userListContent.innerHTML = '';
+            Object.keys(data.scores).forEach(user => {
+                const div = document.createElement('div');
+                div.className = 'user-item';
+                div.textContent = user;
+                div.onclick = () => renderUserProfile(user, data.scores[user], data.problems);
+                userListContent.appendChild(div);
+            });
+    
+            console.log('유저 목록 업데이트 완료');
+    
+            // 리더보드 업데이트
+            const sortedScores = Object.entries(data.scores).sort((a, b) => b[1].solved_count - a[1].solved_count);
+            let leaderboardHtml = '';
+            sortedScores.forEach(([user, score], index) => {
+                leaderboardHtml += `<tr><td>${index + 1}</td><td>${user}</td><td>${score.solved_count}</td><td>${score.solved_problems}</td></tr>`;
+            });
+            document.getElementById('leaderboard-content').innerHTML = leaderboardHtml;
+    
+            console.log('리더보드 업데이트 완료');
+        } catch (error) {
+            console.error('데이터 로드 실패:', error);
+            document.getElementById('leaderboard-content').innerHTML = '<tr><td colspan="4">데이터 로드 실패</td></tr>';
+            document.getElementById('user-list-content').textContent = '데이터 로드 실패';
         }
-        const data = await response.json();
-        console.log('JSON 데이터:', data);
-
-        // 1위 현황 업데이트
-        const allTimeUser = data.top_users.all_time;
-        const previousMonthUser = data.top_users.previous_month;
-        const currentMonthUser = data.top_users.current_month;
-
-        document.getElementById('all-time-user').textContent =
-            `🌟 전체 1위: ${allTimeUser.user} (맞힌: ${allTimeUser.solved_count}, 푼: ${allTimeUser.solved_problems})`;
-
-        document.getElementById('previous-month-user').textContent = previousMonthUser
-            ? `📅 이전 달 1위: ${previousMonthUser.user} (맞힌: ${previousMonthUser.solved_count}, 푼: ${previousMonthUser.solved_problems})`
-            : '📅 이전 달 1위: 데이터 없음';
-
-        document.getElementById('current-month-user').textContent =
-            `📅 이번 달 1위: ${currentMonthUser.user} (맞힌: ${currentMonthUser.solved_count}, 푼: ${currentMonthUser.solved_problems})`;
-
-        console.log('상단 업데이트 완료');
-        // Leaderboard 업데이트
-        const sortedScores = Object.entries(data.scores).sort((a, b) => b[1].solved_count - a[1].solved_count);
-        let leaderboardHtml = '';
-        sortedScores.forEach(([user, score], index) => {
-            leaderboardHtml += `<tr><td>${index + 1}</td><td>${user}</td><td>${score.solved_count}</td><td>${score.solved_problems}</td></tr>`;
-        });
-        document.getElementById('leaderboard-content').innerHTML = leaderboardHtml;
-
-        console.log('리더보드 업데이트 완료');
-
-        // Profile 유저 목록 업데이트
-        const profileUserList = document.getElementById('profile-user-list');
-        profileUserList.innerHTML = '';
-        Object.keys(data.scores).forEach(user => {
-            const li = document.createElement('li');
-            li.textContent = user;
-            li.className = 'user-item';
-            li.onclick = () => renderUserProfile(user, data.scores[user]);
-            profileUserList.appendChild(li);
-        });
-
-        console.log('프로필 업데이트 완료');
-
-        // Details 업데이트
-        let detailsHtml = '';
-        Object.entries(data.scores).forEach(([user, score]) => {
-            detailsHtml += `<tr><td>${user}</td><td>${score.solved_count}</td><td>${score.penalty}</td><td>${score.solved_problems}</td></tr>`;
-        });
-        document.getElementById('details-content').innerHTML = detailsHtml;
-
-        console.log('표 업데이트 완료');
-
-        // 업데이트 시각
-        document.getElementById('last-update').textContent = `업데이트 시각: ${data.last_update}`;
-    } catch (error) {
-        console.error('데이터 로드 실패:', error);
-        document.getElementById('leaderboard-content').innerHTML = '<tr><td colspan="4">데이터 로드 실패</td></tr>';
-        document.getElementById('profile-user-list').textContent = '데이터 로드 실패';
-        document.getElementById('details-content').innerHTML = '<tr><td colspan="4">데이터 로드 실패</td></tr>';
     }
-}
-
-function renderUserProfile(username, userData) {
-    document.getElementById('profile-username').textContent = username;
-    document.getElementById('profile-solved').textContent = userData.solved_count;
-    document.getElementById('profile-penalty').textContent = userData.penalty;
-    document.getElementById('profile-attempted').textContent = userData.solved_problems;
-}
-
-function showTab(tabId) {
-    console.log(`Activating tab: ${tabId}`);
-    document.querySelectorAll('.container').forEach(c => c.classList.remove('active'));
-    const targetContainer = document.getElementById(tabId);
-    if (targetContainer) {
-        targetContainer.classList.add('active');
-    } else {
-        console.error(`Tab container with id "${tabId}" not found.`);
+    
+    function renderUserProfile(username, userData, problems) {
+        document.getElementById('profile-username').textContent = username;
+        document.getElementById('profile-solved').textContent = userData.solved_count;
+        document.getElementById('profile-penalty').textContent = userData.penalty;
+        document.getElementById('profile-attempted').textContent = userData.solved_problems;
+    
+        // 1~3등 정보 추가
+        const rankedMonths = userData.ranked_months.map(r => `${r.month} ${r.rank}등`).join(', ');
+        document.getElementById('solved-list').textContent = rankedMonths;
+    
+        // 패널티 문제 목록
+        const penaltyProblems = Object.entries(problems)
+            .filter(([_, problem]) => problem.is_holiday === false)
+            .map(([id, _]) => id).join(', ');
+        document.getElementById('penalty-problems').textContent = penaltyProblems;
+    
+        // 휴일 문제 목록
+        const holidayProblems = Object.entries(problems)
+            .filter(([_, problem]) => problem.is_holiday === true)
+            .map(([id, _]) => id).join(', ');
+        document.getElementById('holiday-problems').textContent = holidayProblems;
     }
-
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-    const activeTab = document.querySelector(`.tab[onclick="showTab('${tabId}')"]`);
-    if (activeTab) {
-        activeTab.classList.add('active');
-    } else {
-        console.error(`Tab with onclick "showTab('${tabId}')" not found.`);
-    }
-}
-
-console.log('스크립트 로드 완료');
-// JSON 데이터 로드 및 렌더링 실행
-loadJsonAndRender();
-console.log('스크립트 종료');
-</script>
+    
+    loadJsonAndRender();
+    </script>
+    
 </body>
 </html>
