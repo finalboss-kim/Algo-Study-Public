@@ -81,17 +81,42 @@
 </div>
 <div id="leaderboard" class="container active">
     <h2>순위 & 패널티</h2>
-    <p>데이터 로드 중...</p>
+    <table>
+        <thead>
+            <tr>
+                <th class="rank-col">순위</th>
+                <th>유저</th>
+                <th>맞힌 문제</th>
+                <th>푼 문제</th>
+            </tr>
+        </thead>
+        <tbody id="leaderboard-content">
+            <!-- 동적 데이터 추가 -->
+        </tbody>
+    </table>
 </div>
 <div id="profile" class="container">
     <h2>유저 프로필</h2>
-    <p>데이터 로드 중...</p>
+    <ul id="profile-content">
+        <!-- 동적 데이터 추가 -->
+    </ul>
 </div>
 <div id="details" class="container">
     <h2>상세 내역</h2>
-    <p>데이터 로드 중...</p>
+    <table>
+        <thead>
+            <tr>
+                <th>유저</th>
+                <th>맞힘</th>
+                <th>패널티</th>
+                <th>풀었음</th>
+            </tr>
+        </thead>
+        <tbody id="details-content">
+            <!-- 동적 데이터 추가 -->
+        </tbody>
+    </table>
 </div>
-
 <script>
 async function loadJsonAndRender() {
     try {
@@ -101,46 +126,51 @@ async function loadJsonAndRender() {
         }
         const data = await response.json();
 
-        // JSON 데이터 유효성 확인
-        if (!data || !data.top_users || !data.scores) {
-            throw new Error('JSON 데이터가 올바르지 않습니다.');
-        }
-
-        // Update top users section
-        document.getElementById('all-time-user').textContent = `🌟 전체 1위: ${data.top_users.all_time.user} (맞힌: ${data.top_users.all_time.solved_count}, 푼: ${data.top_users.all_time.solved_problems})`;
-        document.getElementById('previous-month-user').textContent = data.top_users.previous_month
-            ? `📅 이전 달 1위: ${data.top_users.previous_month.user} (맞힌: ${data.top_users.previous_month.solved_count}, 푼: ${data.top_users.previous_month.solved_problems})`
-            : '📅 이전 달 1위: 데이터 없음';
-        document.getElementById('current-month-user').textContent = `📅 이번 달 1위: ${data.top_users.current_month.user} (맞힌: ${data.top_users.current_month.solved_count}, 푼: ${data.top_users.current_month.solved_problems})`;
-
-        // Update last update timestamp
-        document.getElementById('last-update').textContent = `업데이트 시각: ${data.last_update || '데이터 없음'}`;
-
-        // Populate leaderboard (example implementation)
+        // Leaderboard 업데이트
         const sortedScores = Object.entries(data.scores).sort((a, b) => b[1].solved_count - a[1].solved_count);
-        let leaderboardHtml = '<table><thead><tr><th>순위</th><th>유저</th><th>맞힌 문제</th><th>푼 문제</th></tr></thead><tbody>';
+        let leaderboardHtml = '';
         sortedScores.forEach(([user, score], index) => {
             leaderboardHtml += `<tr><td>${index + 1}</td><td>${user}</td><td>${score.solved_count}</td><td>${score.solved_problems}</td></tr>`;
         });
-        leaderboardHtml += '</tbody></table>';
+        document.getElementById('leaderboard-content').innerHTML = leaderboardHtml;
 
-        document.getElementById('leaderboard').innerHTML = leaderboardHtml;
+        // Profile 업데이트
+        let profileHtml = '';
+        Object.keys(data.scores).forEach(user => {
+            profileHtml += `<li>${user}</li>`;
+        });
+        document.getElementById('profile-content').innerHTML = profileHtml;
 
+        // Details 업데이트
+        let detailsHtml = '';
+        Object.entries(data.scores).forEach(([user, score]) => {
+            detailsHtml += `<tr><td>${user}</td><td>${score.solved_count}</td><td>${score.penalty}</td><td>${score.solved_problems}</td></tr>`;
+        });
+        document.getElementById('details-content').innerHTML = detailsHtml;
+
+        // 업데이트 시각
+        document.getElementById('last-update').textContent = `업데이트 시각: ${data.last_update}`;
     } catch (error) {
         console.error('데이터 로드 실패:', error);
-        document.getElementById('content').textContent = '데이터 로드에 실패했습니다.';
+        document.getElementById('leaderboard-content').innerHTML = '<tr><td colspan="4">데이터 로드 실패</td></tr>';
+        document.getElementById('profile-content').textContent = '데이터 로드 실패';
+        document.getElementById('details-content').innerHTML = '<tr><td colspan="4">데이터 로드 실패</td></tr>';
     }
 }
 
 function showTab(tabId) {
+    // 모든 컨테이너 숨기기
     document.querySelectorAll('.container').forEach(c => c.classList.remove('active'));
+    // 선택된 컨테이너만 활성화
     document.getElementById(tabId).classList.add('active');
+
+    // 모든 탭 비활성화
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    // 클릭된 탭 활성화
     document.querySelector(`.tab[onclick="showTab('${tabId}')"]`).classList.add('active');
 }
 
-
-// Load JSON and render content
+// JSON 데이터 로드 및 렌더링
 loadJsonAndRender();
 </script>
 </body>
