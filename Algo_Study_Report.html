@@ -190,4 +190,28 @@ async function loadJsonAndRender() {
     } catch (error) {
         console.error('데이터 로드 실패:', error);
         document.getElementById('leaderboard-content').innerHTML = '<tr><td colspan="4">데이터 로드 실패</td></tr>';
-        document.getElementById('profile-user-list').textContent = '데이터 로드
+        document.getElementById('profile-user-list').textContent = '데이터 로드 실패';
+        document.getElementById('details-content').innerHTML = '<tr><td colspan="4">데이터 로드 실패</td></tr>';
+    }
+}
+
+function renderUserProfile(username, userData) {
+    document.getElementById('profile-username').textContent = username;
+    document.getElementById('profile-solved').textContent = userData.solved_count;
+    document.getElementById('profile-penalty').textContent = userData.penalty;
+    document.getElementById('profile-attempted').textContent = userData.solved_problems;
+}
+
+function showTab(tabId) {
+    document.querySelectorAll('.container').forEach(c => c.classList.remove('active'));
+    document.getElementById(tabId).classList.add('active');
+
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelector(`.tab[onclick="showTab('${tabId}')"]`).classList.add('active');
+}
+
+// JSON 데이터 로드 및 렌더링 실행
+loadJsonAndRender();
+</script>
+</body>
+</html>
