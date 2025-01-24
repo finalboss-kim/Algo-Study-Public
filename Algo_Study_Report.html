@@ -197,10 +197,10 @@
     async function loadJsonAndRender() {
         try {
             console.log('스크립트 실행 시작');
-            const response = await fetch('https://finalboss-kim.github.io/Algo-Study-Public/userdata.json');
-            if (!response.ok) {
-                throw new Error(`HTTP 오류: ${response.status}`);
-            }
+            const response = await fetch('https://finalboss-kim.github.io/Algo-Study-Public/userdata.json', {
+                method: 'GET',
+                cache: 'no-cache', // 캐싱 우회
+            });
             const data = await response.json();
             console.log('JSON 데이터:', data);
 
