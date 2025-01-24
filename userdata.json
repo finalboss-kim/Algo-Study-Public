@@ -34,6 +34,11 @@
             "name": "정사각형으로 가리기",
             "listed_date": "2025-01-22",
             "is_holiday": false
+        },
+        "12968": {
+            "name": "방문",
+            "listed_date": "2025-01-24",
+            "is_holiday": false
         }
     },
     "user_problem_matrix": {
@@ -89,7 +94,7 @@
             "24053": 1.0,
             "12842": 1.0,
             "1569": 1.0,
-            "5212": -1.0
+            "5212": 1.0
         },
         "ooo_0502": {
             "30406": 1.0,
@@ -98,7 +103,7 @@
             "24053": 1.0,
             "12842": 1.0,
             "1569": 0.0,
-            "5212": -1.0
+            "5212": 1.0
         },
         "spacegg13": {
             "30406": 0.0,
@@ -115,7 +120,7 @@
             "1198": -1.0,
             "24053": 1.0,
             "12842": 1.0,
-            "1569": 0.0,
+            "1569": 1.0,
             "5212": -1.0
         }
     },
@@ -151,15 +156,15 @@
             "ranked_months": []
         },
         "nes128": {
-            "solved_count": 5,
-            "solved_problems": 5,
-            "penalty": 1,
+            "solved_count": 6,
+            "solved_problems": 6,
+            "penalty": 0,
             "ranked_months": []
         },
         "ooo_0502": {
-            "solved_count": 3,
-            "solved_problems": 4,
-            "penalty": 1,
+            "solved_count": 4,
+            "solved_problems": 5,
+            "penalty": 0,
             "ranked_months": []
         },
         "spacegg13": {
@@ -169,7 +174,7 @@
             "ranked_months": []
         },
         "taroguru": {
-            "solved_count": 4,
+            "solved_count": 5,
             "solved_problems": 5,
             "penalty": 1,
             "ranked_months": []
@@ -187,5 +192,5 @@
             "solved_problems": 7
         }
     },
-    "last_update": "2025-01-23 18:27:59"
+    "last_update": "2025-01-24 10:55:34"
 }
