@@ -51,42 +51,6 @@
             "1569": 1.0,
             "5212": 1.0
         },
-        "nes128": {
-            "30406": 1.0,
-            "28075": 1.0,
-            "1198": -1.0,
-            "24053": 1.0,
-            "12842": 1.0,
-            "1569": 1.0,
-            "5212": 1.0
-        },
-        "ooo_0502": {
-            "30406": 1.0,
-            "28075": -1.0,
-            "1198": -1.0,
-            "24053": 1.0,
-            "12842": 1.0,
-            "1569": 0.0,
-            "5212": 1.0
-        },
-        "spacegg13": {
-            "30406": 0.0,
-            "28075": 1.0,
-            "1198": -1.0,
-            "24053": 1.0,
-            "12842": 1.0,
-            "1569": 1.0,
-            "5212": 1.0
-        },
-        "taroguru": {
-            "30406": 1.0,
-            "28075": 1.0,
-            "1198": -1.0,
-            "24053": 1.0,
-            "12842": 1.0,
-            "1569": 1.0,
-            "5212": -1.0
-        },
         "finalboss_kim": {
             "30406": 1.0,
             "28075": 1.0,
@@ -122,6 +86,42 @@
             "12842": 1.0,
             "1569": 1.0,
             "5212": -1.0
+        },
+        "nes128": {
+            "30406": 1.0,
+            "28075": 1.0,
+            "1198": -1.0,
+            "24053": 1.0,
+            "12842": 1.0,
+            "1569": 1.0,
+            "5212": 1.0
+        },
+        "ooo_0502": {
+            "30406": 1.0,
+            "28075": -1.0,
+            "1198": -1.0,
+            "24053": 1.0,
+            "12842": 1.0,
+            "1569": 0.0,
+            "5212": 1.0
+        },
+        "spacegg13": {
+            "30406": 0.0,
+            "28075": 1.0,
+            "1198": -1.0,
+            "24053": 1.0,
+            "12842": 1.0,
+            "1569": 1.0,
+            "5212": 1.0
+        },
+        "taroguru": {
+            "30406": 1.0,
+            "28075": 1.0,
+            "1198": -1.0,
+            "24053": 1.0,
+            "12842": 1.0,
+            "1569": 1.0,
+            "5212": -1.0
         }
     },
     "scores": {
@@ -129,30 +129,6 @@
             "solved_count": 7,
             "solved_problems": 7,
             "penalty": 0,
-            "ranked_months": []
-        },
-        "nes128": {
-            "solved_count": 6,
-            "solved_problems": 6,
-            "penalty": 0,
-            "ranked_months": []
-        },
-        "ooo_0502": {
-            "solved_count": 4,
-            "solved_problems": 5,
-            "penalty": 0,
-            "ranked_months": []
-        },
-        "spacegg13": {
-            "solved_count": 5,
-            "solved_problems": 6,
-            "penalty": 0,
-            "ranked_months": []
-        },
-        "taroguru": {
-            "solved_count": 5,
-            "solved_problems": 5,
-            "penalty": 1,
             "ranked_months": []
         },
         "finalboss_kim": {
@@ -178,39 +154,43 @@
             "solved_problems": 6,
             "penalty": 1,
             "ranked_months": []
+        },
+        "nes128": {
+            "solved_count": 6,
+            "solved_problems": 6,
+            "penalty": 0,
+            "ranked_months": []
+        },
+        "ooo_0502": {
+            "solved_count": 4,
+            "solved_problems": 5,
+            "penalty": 0,
+            "ranked_months": []
+        },
+        "spacegg13": {
+            "solved_count": 5,
+            "solved_problems": 6,
+            "penalty": 0,
+            "ranked_months": []
+        },
+        "taroguru": {
+            "solved_count": 5,
+            "solved_problems": 5,
+            "penalty": 1,
+            "ranked_months": []
         }
     },
     "top_users": {
-        "current_month": {},
+        "current_month": {
+            "user": "741u741",
+            "solved_count": 7,
+            "solved_problems": 7
+        },
         "all_time": {
             "user": "741u741",
-            "solved_count": 1,
-            "solved_problems": 1
-        },
-        "previous_month": {}
-    },
-    "last_update": "2025-01-24 12:28:45",
-    "monthly_records": [
-        {
-            "month": "2025-01",
-            "leaderboard": [
-                {
-                    "user": "741u741",
-                    "rank": 1,
-                    "month": "2025-01"
-                },
-                {
-                    "user": "nes128",
-                    "rank": 2,
-                    "month": "2025-01"
-                },
-                {
-                    "user": "ooo_0502",
-                    "rank": 3,
-                    "month": "2025-01"
-                }
-            ]
+            "solved_count": 7,
+            "solved_problems": 7
         }
-    ],
-    "last_updated": "2025-01-24"
+    },
+    "last_update": "2025-01-24 13:01:21"
 }
