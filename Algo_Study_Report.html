@@ -219,6 +219,9 @@
             document.getElementById('current-month-user').textContent =
                 `📅 이번 달 1위: ${currentMonthUser.user} (맞힌: ${currentMonthUser.solved_count}, 푼: ${currentMonthUser.solved_problems})`;
 
+            const last_update_time = data.last_update;
+            document.getElementById('last-update').textContent = `업데이트 시각: ${last_update_time}`;
+
             console.log('상단 업데이트 완료');
 
             // 유저 목록 업데이트
