@@ -60,7 +60,7 @@
             "12842": 1.0,
             "1569": 1.0,
             "5212": 1.0,
-            "12968": -1.0
+            "12968": 0.0
         },
         "inu519": {
             "30406": 1.0,
@@ -142,8 +142,8 @@
         },
         "finalboss_kim": {
             "solved_count": 7,
-            "solved_problems": 7,
-            "penalty": 1,
+            "solved_problems": 8,
+            "penalty": 0,
             "ranked_months": []
         },
         "inu519": {
@@ -191,15 +191,15 @@
     },
     "top_users": {
         "current_month": {
-            "user": "741u741",
+            "user": "finalboss_kim",
             "solved_count": 7,
-            "solved_problems": 7
+            "solved_problems": 8
         },
         "all_time": {
-            "user": "741u741",
+            "user": "finalboss_kim",
             "solved_count": 7,
-            "solved_problems": 7
+            "solved_problems": 8
         }
     },
-    "last_update": "2025-01-24 14:10:58"
+    "last_update": "2025-01-24 15:01:10"
 }
