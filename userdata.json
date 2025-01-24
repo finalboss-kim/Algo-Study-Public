@@ -49,7 +49,8 @@
             "24053": 1.0,
             "12842": 1.0,
             "1569": 1.0,
-            "5212": 1.0
+            "5212": 1.0,
+            "12968": -1
         },
         "finalboss_kim": {
             "30406": 1.0,
@@ -58,7 +59,8 @@
             "24053": 1.0,
             "12842": 1.0,
             "1569": 1.0,
-            "5212": 1.0
+            "5212": 1.0,
+            "12968": -1
         },
         "inu519": {
             "30406": 1.0,
@@ -67,7 +69,8 @@
             "24053": 1.0,
             "12842": 1.0,
             "1569": 1.0,
-            "5212": 1.0
+            "5212": 1.0,
+            "12968": -1
         },
         "jwchoiii54": {
             "30406": 1.0,
@@ -76,7 +79,8 @@
             "24053": -1.0,
             "12842": -1.0,
             "1569": -1.0,
-            "5212": -1.0
+            "5212": -1.0,
+            "12968": -1
         },
         "kzzang131": {
             "30406": 1.0,
@@ -85,7 +89,8 @@
             "24053": 1.0,
             "12842": 1.0,
             "1569": 1.0,
-            "5212": -1.0
+            "5212": -1.0,
+            "12968": -1
         },
         "nes128": {
             "30406": 1.0,
@@ -94,7 +99,8 @@
             "24053": 1.0,
             "12842": 1.0,
             "1569": 1.0,
-            "5212": 1.0
+            "5212": 1.0,
+            "12968": -1
         },
         "ooo_0502": {
             "30406": 1.0,
@@ -103,7 +109,8 @@
             "24053": 1.0,
             "12842": 1.0,
             "1569": 0.0,
-            "5212": 1.0
+            "5212": 1.0,
+            "12968": -1
         },
         "spacegg13": {
             "30406": 0.0,
@@ -112,7 +119,8 @@
             "24053": 1.0,
             "12842": 1.0,
             "1569": 1.0,
-            "5212": 1.0
+            "5212": 1.0,
+            "12968": -1
         },
         "taroguru": {
             "30406": 1.0,
@@ -121,62 +129,63 @@
             "24053": 1.0,
             "12842": 1.0,
             "1569": 1.0,
-            "5212": -1.0
+            "5212": -1.0,
+            "12968": -1
         }
     },
     "scores": {
         "741u741": {
             "solved_count": 7,
             "solved_problems": 7,
-            "penalty": 0,
+            "penalty": 1,
             "ranked_months": []
         },
         "finalboss_kim": {
             "solved_count": 7,
             "solved_problems": 7,
-            "penalty": 0,
+            "penalty": 1,
             "ranked_months": []
         },
         "inu519": {
             "solved_count": 5,
             "solved_problems": 5,
-            "penalty": 0,
+            "penalty": 1,
             "ranked_months": []
         },
         "jwchoiii54": {
             "solved_count": 2,
             "solved_problems": 2,
-            "penalty": 4,
+            "penalty": 5,
             "ranked_months": []
         },
         "kzzang131": {
             "solved_count": 6,
             "solved_problems": 6,
-            "penalty": 1,
+            "penalty": 2,
             "ranked_months": []
         },
         "nes128": {
             "solved_count": 6,
             "solved_problems": 6,
-            "penalty": 0,
+            "penalty": 1,
             "ranked_months": []
         },
         "ooo_0502": {
             "solved_count": 4,
             "solved_problems": 5,
-            "penalty": 0,
+            "penalty": 1,
             "ranked_months": []
         },
         "spacegg13": {
             "solved_count": 5,
             "solved_problems": 6,
-            "penalty": 0,
+            "penalty": 1,
             "ranked_months": []
         },
         "taroguru": {
             "solved_count": 5,
             "solved_problems": 5,
-            "penalty": 1,
+            "penalty": 2,
             "ranked_months": []
         }
     },
@@ -192,5 +201,5 @@
             "solved_problems": 7
         }
     },
-    "last_update": "2025-01-24 13:01:21"
+    "last_update": "2025-01-24 13:11:26"
 }
