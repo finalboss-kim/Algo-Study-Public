@@ -71,7 +71,7 @@
             "is_holiday": true
         },
         "3621": {
-            "name": "족보30106 2025-02-04 현이의 로봇 청소기",
+            "name": "족보",
             "listed_date": "2025-01-31",
             "is_holiday": false
         },
@@ -328,5 +328,5 @@
             "solved_problems": 18
         }
     },
-    "last_update": "2025-02-04 10:27:49"
+    "last_update": "2025-02-04 10:31:54"
 }
