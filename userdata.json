@@ -122,7 +122,7 @@
             "29159": 1.0,
             "1058": 1.0,
             "30106": 1.0,
-            "23758": -1.0
+            "23758": 1.0
         },
         "finalboss_kim": {
             "30406": 1.0,
@@ -138,12 +138,12 @@
             "21980": 1.0,
             "1325": 1.0,
             "27649": 1.0,
-            "2597": -1.0,
+            "2597": 1.0,
             "3621": 1.0,
-            "19637": -1.0,
-            "29159": -1.0,
+            "19637": 1.0,
+            "29159": 0.0,
             "1058": -1.0,
-            "30106": -1.0,
+            "30106": 1.0,
             "23758": 1.0
         },
         "inu519": {
@@ -281,15 +281,15 @@
     },
     "scores": {
         "741u741": {
-            "solved_count": 19,
-            "solved_problems": 19,
-            "penalty": 1,
+            "solved_count": 20,
+            "solved_problems": 20,
+            "penalty": 0,
             "ranked_months": []
         },
         "finalboss_kim": {
-            "solved_count": 15,
-            "solved_problems": 15,
-            "penalty": 2,
+            "solved_count": 18,
+            "solved_problems": 19,
+            "penalty": 1,
             "ranked_months": []
         },
         "inu519": {
@@ -332,14 +332,14 @@
     "top_users": {
         "current_month": {
             "user": "741u741",
-            "solved_count": 19,
-            "solved_problems": 19
+            "solved_count": 20,
+            "solved_problems": 20
         },
         "all_time": {
             "user": "741u741",
-            "solved_count": 19,
-            "solved_problems": 19
+            "solved_count": 20,
+            "solved_problems": 20
         }
     },
-    "last_update": "2025-02-05 12:03:10"
+    "last_update": "2025-02-05 13:57:29"
 }
