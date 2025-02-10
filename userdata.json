@@ -104,6 +104,16 @@
             "name": "단어 우월 효과 (캠브릿지 대학의 연구결과)",
             "listed_date": "2025-02-07",
             "is_holiday": false
+        },
+        "17271": {
+            "name": "리그 오브 레전설 (Small)",
+            "listed_date": "2025-02-10",
+            "is_holiday": false
+        },
+        "32982": {
+            "name": "약물 복용",
+            "listed_date": "2025-02-09",
+            "is_holiday": true
         }
     },
     "user_problem_matrix": {
@@ -128,7 +138,9 @@
             "1058": 1.0,
             "30106": 1.0,
             "23758": 1.0,
-            "25957": 1.0
+            "25957": 1.0,
+            "32982": 1.0,
+            "17271": -1
         },
         "finalboss_kim": {
             "30406": 1.0,
@@ -151,7 +163,9 @@
             "1058": -1.0,
             "30106": 1.0,
             "23758": 1.0,
-            "25957": 1.0
+            "25957": 1.0,
+            "32982": -1,
+            "17271": -1
         },
         "inu519": {
             "30406": 1.0,
@@ -174,7 +188,9 @@
             "1058": 1.0,
             "30106": -1.0,
             "23758": -1.0,
-            "25957": 1.0
+            "25957": 1.0,
+            "32982": -1,
+            "17271": -1
         },
         "kzzang131": {
             "30406": 1.0,
@@ -197,7 +213,9 @@
             "1058": -1.0,
             "30106": -1.0,
             "23758": 1.0,
-            "25957": 1.0
+            "25957": 1.0,
+            "32982": -1,
+            "17271": -1
         },
         "nes128": {
             "30406": 1.0,
@@ -220,7 +238,9 @@
             "1058": 1.0,
             "30106": 1.0,
             "23758": 1.0,
-            "25957": 0.0
+            "25957": 0.0,
+            "32982": 0.0,
+            "17271": -1
         },
         "ooo_0502": {
             "30406": 1.0,
@@ -243,7 +263,9 @@
             "1058": -1.0,
             "30106": -1.0,
             "23758": -1.0,
-            "25957": 0.0
+            "25957": 0.0,
+            "32982": -1,
+            "17271": -1
         },
         "spacegg13": {
             "30406": 0.0,
@@ -266,7 +288,9 @@
             "1058": 1.0,
             "30106": -1.0,
             "23758": -1.0,
-            "25957": 1.0
+            "25957": 1.0,
+            "32982": -1,
+            "17271": 1.0
         },
         "taroguru": {
             "30406": 1.0,
@@ -289,70 +313,72 @@
             "1058": -1.0,
             "30106": -1.0,
             "23758": -1.0,
-            "25957": -1.0
+            "25957": -1.0,
+            "32982": -1,
+            "17271": -1
         }
     },
     "scores": {
         "741u741": {
-            "solved_count": 21,
-            "solved_problems": 21,
-            "penalty": 0,
+            "solved_count": 22,
+            "solved_problems": 22,
+            "penalty": 1,
             "ranked_months": []
         },
         "finalboss_kim": {
             "solved_count": 20,
             "solved_problems": 20,
-            "penalty": 1,
+            "penalty": 2,
             "ranked_months": []
         },
         "inu519": {
             "solved_count": 12,
             "solved_problems": 12,
-            "penalty": 2,
+            "penalty": 3,
             "ranked_months": []
         },
         "kzzang131": {
             "solved_count": 8,
             "solved_problems": 8,
-            "penalty": 5,
+            "penalty": 6,
             "ranked_months": []
         },
         "nes128": {
             "solved_count": 12,
-            "solved_problems": 13,
-            "penalty": 0,
+            "solved_problems": 14,
+            "penalty": 1,
             "ranked_months": []
         },
         "ooo_0502": {
             "solved_count": 4,
             "solved_problems": 7,
-            "penalty": 5,
+            "penalty": 6,
             "ranked_months": []
         },
         "spacegg13": {
-            "solved_count": 13,
-            "solved_problems": 14,
+            "solved_count": 14,
+            "solved_problems": 15,
             "penalty": 3,
             "ranked_months": []
         },
         "taroguru": {
             "solved_count": 8,
             "solved_problems": 8,
-            "penalty": 5,
+            "penalty": 6,
             "ranked_months": []
         }
     },
     "top_users": {
         "current_month": {
             "user": "741u741",
-            "solved_count": 21,
-            "solved_problems": 21
+            "solved_count": 22,
+            "solved_problems": 22
         },
         "all_time": {
             "user": "741u741",
-            "solved_count": 21,
-            "solved_problems": 21
+            "solved_count": 22,
+            "solved_problems": 22
         }
     },
-    "last_update": "2025-02-07 17:09:45"
+    "last_update": "2025-02-10 09:05:13"
 }
