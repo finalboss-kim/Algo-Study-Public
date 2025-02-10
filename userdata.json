@@ -240,7 +240,7 @@
             "23758": 1.0,
             "25957": 0.0,
             "32982": 0.0,
-            "17271": -1.0
+            "17271": 1.0
         },
         "ooo_0502": {
             "30406": 1.0,
@@ -344,9 +344,9 @@
             "ranked_months": []
         },
         "nes128": {
-            "solved_count": 12,
-            "solved_problems": 14,
-            "penalty": 1,
+            "solved_count": 13,
+            "solved_problems": 15,
+            "penalty": 0,
             "ranked_months": []
         },
         "ooo_0502": {
@@ -380,5 +380,5 @@
             "solved_problems": 22
         }
     },
-    "last_update": "2025-02-10 10:04:20"
+    "last_update": "2025-02-10 11:19:17"
 }
