@@ -114,6 +114,21 @@
             "name": "약물 복용",
             "listed_date": "2025-02-09",
             "is_holiday": true
+        },
+        "28015": {
+            "name": "영역 색칠",
+            "listed_date": "2025-02-11",
+            "is_holiday": false
+        },
+        "11581": {
+            "name": "구호물자",
+            "listed_date": "2025-02-10",
+            "is_holiday": false
+        },
+        "27737": {
+            "name": "버섯 농장",
+            "listed_date": "2025-02-09",
+            "is_holiday": true
         }
     },
     "user_problem_matrix": {
@@ -139,8 +154,11 @@
             "30106": 1.0,
             "23758": 1.0,
             "25957": 1.0,
+            "27737": -1,
             "32982": 1.0,
-            "17271": 1.0
+            "17271": 1.0,
+            "11581": -1,
+            "28015": 1.0
         },
         "finalboss_kim": {
             "30406": 1.0,
@@ -164,8 +182,11 @@
             "30106": 1.0,
             "23758": 1.0,
             "25957": 1.0,
+            "27737": -1,
             "32982": 0.0,
-            "17271": 1.0
+            "17271": 1.0,
+            "11581": -1,
+            "28015": 1.0
         },
         "inu519": {
             "30406": 1.0,
@@ -189,8 +210,11 @@
             "30106": -1.0,
             "23758": -1.0,
             "25957": 1.0,
+            "27737": -1,
             "32982": -1.0,
-            "17271": -1.0
+            "17271": -1.0,
+            "11581": -1,
+            "28015": 0.0
         },
         "kzzang131": {
             "30406": 1.0,
@@ -214,8 +238,11 @@
             "30106": -1.0,
             "23758": 1.0,
             "25957": 1.0,
+            "27737": -1,
             "32982": -1.0,
-            "17271": -1.0
+            "17271": -1.0,
+            "11581": -1,
+            "28015": -1
         },
         "nes128": {
             "30406": 1.0,
@@ -239,8 +266,11 @@
             "30106": 1.0,
             "23758": 1.0,
             "25957": 0.0,
+            "27737": -1,
             "32982": 0.0,
-            "17271": 1.0
+            "17271": 1.0,
+            "11581": -1,
+            "28015": 1.0
         },
         "ooo_0502": {
             "30406": 1.0,
@@ -264,8 +294,11 @@
             "30106": -1.0,
             "23758": -1.0,
             "25957": 0.0,
+            "27737": -1,
             "32982": -1.0,
-            "17271": 1.0
+            "17271": 1.0,
+            "11581": -1,
+            "28015": -1
         },
         "spacegg13": {
             "30406": 0.0,
@@ -289,8 +322,11 @@
             "30106": -1.0,
             "23758": -1.0,
             "25957": 1.0,
+            "27737": -1,
             "32982": -1.0,
-            "17271": 1.0
+            "17271": 1.0,
+            "11581": -1,
+            "28015": 0.0
         },
         "taroguru": {
             "30406": 1.0,
@@ -314,71 +350,74 @@
             "30106": -1.0,
             "23758": -1.0,
             "25957": -1.0,
+            "27737": -1,
             "32982": -1.0,
-            "17271": -1.0
+            "17271": -1.0,
+            "11581": -1,
+            "28015": -1
         }
     },
     "scores": {
         "741u741": {
-            "solved_count": 23,
-            "solved_problems": 23,
-            "penalty": 0,
+            "solved_count": 24,
+            "solved_problems": 24,
+            "penalty": 1,
             "ranked_months": []
         },
         "finalboss_kim": {
-            "solved_count": 22,
-            "solved_problems": 23,
-            "penalty": 0,
+            "solved_count": 23,
+            "solved_problems": 24,
+            "penalty": 1,
             "ranked_months": []
         },
         "inu519": {
             "solved_count": 12,
-            "solved_problems": 12,
-            "penalty": 3,
+            "solved_problems": 13,
+            "penalty": 4,
             "ranked_months": []
         },
         "kzzang131": {
             "solved_count": 8,
             "solved_problems": 8,
-            "penalty": 6,
+            "penalty": 8,
             "ranked_months": []
         },
         "nes128": {
-            "solved_count": 13,
-            "solved_problems": 15,
-            "penalty": 0,
+            "solved_count": 14,
+            "solved_problems": 16,
+            "penalty": 1,
             "ranked_months": []
         },
         "ooo_0502": {
             "solved_count": 5,
             "solved_problems": 8,
-            "penalty": 5,
+            "penalty": 7,
             "ranked_months": []
         },
         "spacegg13": {
             "solved_count": 14,
-            "solved_problems": 15,
-            "penalty": 3,
+            "solved_problems": 16,
+            "penalty": 4,
             "ranked_months": []
         },
         "taroguru": {
             "solved_count": 8,
             "solved_problems": 8,
-            "penalty": 6,
+            "penalty": 8,
             "ranked_months": []
         }
     },
     "top_users": {
         "current_month": {
             "user": "741u741",
-            "solved_count": 23,
-            "solved_problems": 23
+            "solved_count": 24,
+            "solved_problems": 24
         },
         "all_time": {
             "user": "741u741",
-            "solved_count": 23,
-            "solved_problems": 23
+            "solved_count": 24,
+            "solved_problems": 24
         }
     },
-    "last_update": "2025-02-11 12:06:17"
+    "last_update": "2025-02-11 12:43:27"
 }
