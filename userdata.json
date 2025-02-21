@@ -397,7 +397,7 @@
             "10899": 1.0,
             "20921": 1.0,
             "9659": 1.0,
-            "1606": -1.0
+            "1606": 0.0
         },
         "spacegg13": {
             "30406": 0.0,
@@ -507,8 +507,8 @@
         },
         "ooo_0502": {
             "solved_count": 10,
-            "solved_problems": 13,
-            "penalty": 9,
+            "solved_problems": 14,
+            "penalty": 8,
             "ranked_months": []
         },
         "spacegg13": {
@@ -536,5 +536,5 @@
             "solved_problems": 33
         }
     },
-    "last_update": "2025-02-20 18:01:21"
+    "last_update": "2025-02-21 09:26:16"
 }
