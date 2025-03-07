@@ -3,18 +3,17 @@
     "2025-03": {
       "finalboss_kim": {
         "name": "finalboss_kim",
-        "solved_count": 3,
-        "attempted_count": 3,
-        "penalty_count": 1,
-        "missed_problems": [
+        "solved_count": 4,
+        "attempted_count": 4,
+        "penalty_count": 0,
+        "missed_problems": [],
+        "solved_problems": [
           {
             "date": "2025-03-04",
             "problem_id": 32142,
             "title": "서바이벌",
             "url": "https://www.acmicpc.net/problem/32142"
-          }
-        ],
-        "solved_problems": [
+          },
           {
             "date": "2025-03-05",
             "problem_id": 20364,
@@ -36,6 +35,12 @@
         ],
         "attempted_problems": [
           {
+            "date": "2025-03-04",
+            "problem_id": 32142,
+            "title": "서바이벌",
+            "url": "https://www.acmicpc.net/problem/32142"
+          },
+          {
             "date": "2025-03-05",
             "problem_id": 20364,
             "title": "부동산 다툼",
@@ -53,7 +58,30 @@
             "title": "너 그리고 나 (NAVILLERA)",
             "url": "https://www.acmicpc.net/problem/32282"
           }
-        ]
+        ],
+        "unsolved_problems": [
+          {
+            "date": "2025-03-01",
+            "problem_id": 2205,
+            "title": "저울 추 만들기",
+            "url": "https://www.acmicpc.net/problem/2205"
+          },
+          {
+            "date": "2025-03-02",
+            "problem_id": 2792,
+            "title": "보석 상자",
+            "url": "https://www.acmicpc.net/problem/2792"
+          },
+          {
+            "date": "2025-03-03",
+            "problem_id": 14731,
+            "title": "謎紛芥索紀 (Large)",
+            "url": "https://www.acmicpc.net/problem/14731"
+          }
+        ],
+        "total_problems_count": 7,
+        "unsolved_count": 3,
+        "solved_percentage": 57.14
       },
       "741u741": {
         "name": "741u741",
@@ -143,7 +171,18 @@
             "title": "통계학",
             "url": "https://www.acmicpc.net/problem/2108"
           }
-        ]
+        ],
+        "unsolved_problems": [
+          {
+            "date": "2025-03-07",
+            "problem_id": 32282,
+            "title": "너 그리고 나 (NAVILLERA)",
+            "url": "https://www.acmicpc.net/problem/32282"
+          }
+        ],
+        "total_problems_count": 7,
+        "unsolved_count": 1,
+        "solved_percentage": 85.71
       },
       "inu519": {
         "name": "inu519",
@@ -177,7 +216,54 @@
           }
         ],
         "solved_problems": [],
-        "attempted_problems": []
+        "attempted_problems": [],
+        "unsolved_problems": [
+          {
+            "date": "2025-03-01",
+            "problem_id": 2205,
+            "title": "저울 추 만들기",
+            "url": "https://www.acmicpc.net/problem/2205"
+          },
+          {
+            "date": "2025-03-02",
+            "problem_id": 2792,
+            "title": "보석 상자",
+            "url": "https://www.acmicpc.net/problem/2792"
+          },
+          {
+            "date": "2025-03-03",
+            "problem_id": 14731,
+            "title": "謎紛芥索紀 (Large)",
+            "url": "https://www.acmicpc.net/problem/14731"
+          },
+          {
+            "date": "2025-03-04",
+            "problem_id": 32142,
+            "title": "서바이벌",
+            "url": "https://www.acmicpc.net/problem/32142"
+          },
+          {
+            "date": "2025-03-05",
+            "problem_id": 20364,
+            "title": "부동산 다툼",
+            "url": "https://www.acmicpc.net/problem/20364"
+          },
+          {
+            "date": "2025-03-06",
+            "problem_id": 2108,
+            "title": "통계학",
+            "url": "https://www.acmicpc.net/problem/2108"
+          },
+          {
+            "date": "2025-03-07",
+            "problem_id": 32282,
+            "title": "너 그리고 나 (NAVILLERA)",
+            "url": "https://www.acmicpc.net/problem/32282"
+          }
+        ],
+        "total_problems_count": 7,
+        "unsolved_count": 7,
+        "solved_percentage": 0.0
       },
       "kzzang131": {
         "name": "kzzang131",
@@ -211,7 +297,54 @@
           }
         ],
         "solved_problems": [],
-        "attempted_problems": []
+        "attempted_problems": [],
+        "unsolved_problems": [
+          {
+            "date": "2025-03-01",
+            "problem_id": 2205,
+            "title": "저울 추 만들기",
+            "url": "https://www.acmicpc.net/problem/2205"
+          },
+          {
+            "date": "2025-03-02",
+            "problem_id": 2792,
+            "title": "보석 상자",
+            "url": "https://www.acmicpc.net/problem/2792"
+          },
+          {
+            "date": "2025-03-03",
+            "problem_id": 14731,
+            "title": "謎紛芥索紀 (Large)",
+            "url": "https://www.acmicpc.net/problem/14731"
+          },
+          {
+            "date": "2025-03-04",
+            "problem_id": 32142,
+            "title": "서바이벌",
+            "url": "https://www.acmicpc.net/problem/32142"
+          },
+          {
+            "date": "2025-03-05",
+            "problem_id": 20364,
+            "title": "부동산 다툼",
+            "url": "https://www.acmicpc.net/problem/20364"
+          },
+          {
+            "date": "2025-03-06",
+            "problem_id": 2108,
+            "title": "통계학",
+            "url": "https://www.acmicpc.net/problem/2108"
+          },
+          {
+            "date": "2025-03-07",
+            "problem_id": 32282,
+            "title": "너 그리고 나 (NAVILLERA)",
+            "url": "https://www.acmicpc.net/problem/32282"
+          }
+        ],
+        "total_problems_count": 7,
+        "unsolved_count": 7,
+        "solved_percentage": 0.0
       },
       "nes128": {
         "name": "nes128",
@@ -245,7 +378,54 @@
           }
         ],
         "solved_problems": [],
-        "attempted_problems": []
+        "attempted_problems": [],
+        "unsolved_problems": [
+          {
+            "date": "2025-03-01",
+            "problem_id": 2205,
+            "title": "저울 추 만들기",
+            "url": "https://www.acmicpc.net/problem/2205"
+          },
+          {
+            "date": "2025-03-02",
+            "problem_id": 2792,
+            "title": "보석 상자",
+            "url": "https://www.acmicpc.net/problem/2792"
+          },
+          {
+            "date": "2025-03-03",
+            "problem_id": 14731,
+            "title": "謎紛芥索紀 (Large)",
+            "url": "https://www.acmicpc.net/problem/14731"
+          },
+          {
+            "date": "2025-03-04",
+            "problem_id": 32142,
+            "title": "서바이벌",
+            "url": "https://www.acmicpc.net/problem/32142"
+          },
+          {
+            "date": "2025-03-05",
+            "problem_id": 20364,
+            "title": "부동산 다툼",
+            "url": "https://www.acmicpc.net/problem/20364"
+          },
+          {
+            "date": "2025-03-06",
+            "problem_id": 2108,
+            "title": "통계학",
+            "url": "https://www.acmicpc.net/problem/2108"
+          },
+          {
+            "date": "2025-03-07",
+            "problem_id": 32282,
+            "title": "너 그리고 나 (NAVILLERA)",
+            "url": "https://www.acmicpc.net/problem/32282"
+          }
+        ],
+        "total_problems_count": 7,
+        "unsolved_count": 7,
+        "solved_percentage": 0.0
       },
       "ooo_0502": {
         "name": "ooo_0502",
@@ -279,7 +459,54 @@
           }
         ],
         "solved_problems": [],
-        "attempted_problems": []
+        "attempted_problems": [],
+        "unsolved_problems": [
+          {
+            "date": "2025-03-01",
+            "problem_id": 2205,
+            "title": "저울 추 만들기",
+            "url": "https://www.acmicpc.net/problem/2205"
+          },
+          {
+            "date": "2025-03-02",
+            "problem_id": 2792,
+            "title": "보석 상자",
+            "url": "https://www.acmicpc.net/problem/2792"
+          },
+          {
+            "date": "2025-03-03",
+            "problem_id": 14731,
+            "title": "謎紛芥索紀 (Large)",
+            "url": "https://www.acmicpc.net/problem/14731"
+          },
+          {
+            "date": "2025-03-04",
+            "problem_id": 32142,
+            "title": "서바이벌",
+            "url": "https://www.acmicpc.net/problem/32142"
+          },
+          {
+            "date": "2025-03-05",
+            "problem_id": 20364,
+            "title": "부동산 다툼",
+            "url": "https://www.acmicpc.net/problem/20364"
+          },
+          {
+            "date": "2025-03-06",
+            "problem_id": 2108,
+            "title": "통계학",
+            "url": "https://www.acmicpc.net/problem/2108"
+          },
+          {
+            "date": "2025-03-07",
+            "problem_id": 32282,
+            "title": "너 그리고 나 (NAVILLERA)",
+            "url": "https://www.acmicpc.net/problem/32282"
+          }
+        ],
+        "total_problems_count": 7,
+        "unsolved_count": 7,
+        "solved_percentage": 0.0
       },
       "spacegg13": {
         "name": "spacegg13",
@@ -321,7 +548,48 @@
             "title": "통계학",
             "url": "https://www.acmicpc.net/problem/2108"
           }
-        ]
+        ],
+        "unsolved_problems": [
+          {
+            "date": "2025-03-01",
+            "problem_id": 2205,
+            "title": "저울 추 만들기",
+            "url": "https://www.acmicpc.net/problem/2205"
+          },
+          {
+            "date": "2025-03-02",
+            "problem_id": 2792,
+            "title": "보석 상자",
+            "url": "https://www.acmicpc.net/problem/2792"
+          },
+          {
+            "date": "2025-03-03",
+            "problem_id": 14731,
+            "title": "謎紛芥索紀 (Large)",
+            "url": "https://www.acmicpc.net/problem/14731"
+          },
+          {
+            "date": "2025-03-04",
+            "problem_id": 32142,
+            "title": "서바이벌",
+            "url": "https://www.acmicpc.net/problem/32142"
+          },
+          {
+            "date": "2025-03-05",
+            "problem_id": 20364,
+            "title": "부동산 다툼",
+            "url": "https://www.acmicpc.net/problem/20364"
+          },
+          {
+            "date": "2025-03-07",
+            "problem_id": 32282,
+            "title": "너 그리고 나 (NAVILLERA)",
+            "url": "https://www.acmicpc.net/problem/32282"
+          }
+        ],
+        "total_problems_count": 7,
+        "unsolved_count": 6,
+        "solved_percentage": 14.29
       },
       "taroguru": {
         "name": "taroguru",
@@ -355,7 +623,54 @@
           }
         ],
         "solved_problems": [],
-        "attempted_problems": []
+        "attempted_problems": [],
+        "unsolved_problems": [
+          {
+            "date": "2025-03-01",
+            "problem_id": 2205,
+            "title": "저울 추 만들기",
+            "url": "https://www.acmicpc.net/problem/2205"
+          },
+          {
+            "date": "2025-03-02",
+            "problem_id": 2792,
+            "title": "보석 상자",
+            "url": "https://www.acmicpc.net/problem/2792"
+          },
+          {
+            "date": "2025-03-03",
+            "problem_id": 14731,
+            "title": "謎紛芥索紀 (Large)",
+            "url": "https://www.acmicpc.net/problem/14731"
+          },
+          {
+            "date": "2025-03-04",
+            "problem_id": 32142,
+            "title": "서바이벌",
+            "url": "https://www.acmicpc.net/problem/32142"
+          },
+          {
+            "date": "2025-03-05",
+            "problem_id": 20364,
+            "title": "부동산 다툼",
+            "url": "https://www.acmicpc.net/problem/20364"
+          },
+          {
+            "date": "2025-03-06",
+            "problem_id": 2108,
+            "title": "통계학",
+            "url": "https://www.acmicpc.net/problem/2108"
+          },
+          {
+            "date": "2025-03-07",
+            "problem_id": 32282,
+            "title": "너 그리고 나 (NAVILLERA)",
+            "url": "https://www.acmicpc.net/problem/32282"
+          }
+        ],
+        "total_problems_count": 7,
+        "unsolved_count": 7,
+        "solved_percentage": 0.0
       }
     },
     "2025-02": {
@@ -603,7 +918,66 @@
             "title": "돌 게임 5",
             "url": "https://www.acmicpc.net/problem/9659"
           }
-        ]
+        ],
+        "unsolved_problems": [
+          {
+            "date": "2025-02-20",
+            "problem_id": 1606,
+            "title": "침투 계획 세우기",
+            "url": "https://www.acmicpc.net/problem/1606"
+          },
+          {
+            "date": "2025-02-21",
+            "problem_id": 17129,
+            "title": "윌리암슨수액빨이딱따구리가 정보섬에 올라온 이유",
+            "url": "https://www.acmicpc.net/problem/17129"
+          },
+          {
+            "date": "2025-02-22",
+            "problem_id": 9658,
+            "title": "돌 게임 4",
+            "url": "https://www.acmicpc.net/problem/9658"
+          },
+          {
+            "date": "2025-02-23",
+            "problem_id": 20365,
+            "title": "블로그2",
+            "url": "https://www.acmicpc.net/problem/20365"
+          },
+          {
+            "date": "2025-02-24",
+            "problem_id": 31535,
+            "title": "재우의 재수강 1",
+            "url": "https://www.acmicpc.net/problem/31535"
+          },
+          {
+            "date": "2025-02-25",
+            "problem_id": 27968,
+            "title": "사사의 사차원 사탕 봉지",
+            "url": "https://www.acmicpc.net/problem/27968"
+          },
+          {
+            "date": "2025-02-26",
+            "problem_id": 26090,
+            "title": "완전한 수열",
+            "url": "https://www.acmicpc.net/problem/26090"
+          },
+          {
+            "date": "2025-02-27",
+            "problem_id": 13412,
+            "title": "서로소 쌍",
+            "url": "https://www.acmicpc.net/problem/13412"
+          },
+          {
+            "date": "2025-02-28",
+            "problem_id": 9658,
+            "title": "외계인의 기타 연주",
+            "url": "https://www.acmicpc.net/problem/9658"
+          }
+        ],
+        "total_problems_count": 25,
+        "unsolved_count": 9,
+        "solved_percentage": 64.0
       },
       "741u741": {
         "name": "741u741",
@@ -902,7 +1276,18 @@
             "title": "외계인의 기타 연주",
             "url": "https://www.acmicpc.net/problem/9658"
           }
-        ]
+        ],
+        "unsolved_problems": [
+          {
+            "date": "2025-02-22",
+            "problem_id": 9658,
+            "title": "돌 게임 4",
+            "url": "https://www.acmicpc.net/problem/9658"
+          }
+        ],
+        "total_problems_count": 25,
+        "unsolved_count": 1,
+        "solved_percentage": 96.0
       },
       "inu519": {
         "name": "inu519",
@@ -1052,7 +1437,132 @@
             "title": "돌 게임 5",
             "url": "https://www.acmicpc.net/problem/9659"
           }
-        ]
+        ],
+        "unsolved_problems": [
+          {
+            "date": "2025-02-01",
+            "problem_id": 19637,
+            "title": "IF문 좀 대신 써줘",
+            "url": "https://www.acmicpc.net/problem/19637"
+          },
+          {
+            "date": "2025-02-02",
+            "problem_id": 29159,
+            "title": "케이크 두 개",
+            "url": "https://www.acmicpc.net/problem/29159"
+          },
+          {
+            "date": "2025-02-04",
+            "problem_id": 30106,
+            "title": "현이의 로봇 청소기",
+            "url": "https://www.acmicpc.net/problem/30106"
+          },
+          {
+            "date": "2025-02-05",
+            "problem_id": 23758,
+            "title": "중앙값 제거",
+            "url": "https://www.acmicpc.net/problem/23758"
+          },
+          {
+            "date": "2025-02-09",
+            "problem_id": 32982,
+            "title": "약물 복용",
+            "url": "https://www.acmicpc.net/problem/32982"
+          },
+          {
+            "date": "2025-02-10",
+            "problem_id": 17271,
+            "title": "리그 오브 레전설 (Small)",
+            "url": "https://www.acmicpc.net/problem/17271"
+          },
+          {
+            "date": "2025-02-11",
+            "problem_id": 28015,
+            "title": "영역 색칠",
+            "url": "https://www.acmicpc.net/problem/28015"
+          },
+          {
+            "date": "2025-02-12",
+            "problem_id": 31848,
+            "title": "엉성한 도토리 분류기",
+            "url": "https://www.acmicpc.net/problem/31848"
+          },
+          {
+            "date": "2025-02-15",
+            "problem_id": 5107,
+            "title": "마니또",
+            "url": "https://www.acmicpc.net/problem/5107"
+          },
+          {
+            "date": "2025-02-16",
+            "problem_id": 7348,
+            "title": "테이블 옮기기",
+            "url": "https://www.acmicpc.net/problem/7348"
+          },
+          {
+            "date": "2025-02-17",
+            "problem_id": 10899,
+            "title": "King of penalty",
+            "url": "https://www.acmicpc.net/problem/10899"
+          },
+          {
+            "date": "2025-02-20",
+            "problem_id": 1606,
+            "title": "침투 계획 세우기",
+            "url": "https://www.acmicpc.net/problem/1606"
+          },
+          {
+            "date": "2025-02-21",
+            "problem_id": 17129,
+            "title": "윌리암슨수액빨이딱따구리가 정보섬에 올라온 이유",
+            "url": "https://www.acmicpc.net/problem/17129"
+          },
+          {
+            "date": "2025-02-22",
+            "problem_id": 9658,
+            "title": "돌 게임 4",
+            "url": "https://www.acmicpc.net/problem/9658"
+          },
+          {
+            "date": "2025-02-23",
+            "problem_id": 20365,
+            "title": "블로그2",
+            "url": "https://www.acmicpc.net/problem/20365"
+          },
+          {
+            "date": "2025-02-24",
+            "problem_id": 31535,
+            "title": "재우의 재수강 1",
+            "url": "https://www.acmicpc.net/problem/31535"
+          },
+          {
+            "date": "2025-02-25",
+            "problem_id": 27968,
+            "title": "사사의 사차원 사탕 봉지",
+            "url": "https://www.acmicpc.net/problem/27968"
+          },
+          {
+            "date": "2025-02-26",
+            "problem_id": 26090,
+            "title": "완전한 수열",
+            "url": "https://www.acmicpc.net/problem/26090"
+          },
+          {
+            "date": "2025-02-27",
+            "problem_id": 13412,
+            "title": "서로소 쌍",
+            "url": "https://www.acmicpc.net/problem/13412"
+          },
+          {
+            "date": "2025-02-28",
+            "problem_id": 9658,
+            "title": "외계인의 기타 연주",
+            "url": "https://www.acmicpc.net/problem/9658"
+          }
+        ],
+        "total_problems_count": 25,
+        "unsolved_count": 20,
+        "solved_percentage": 20.0
       },
       "kzzang131": {
         "name": "kzzang131",
@@ -1184,7 +1694,150 @@
             "title": "단어 우월 효과 (캠브릿지 대학의 연구결과)",
             "url": "https://www.acmicpc.net/problem/25957"
           }
-        ]
+        ],
+        "unsolved_problems": [
+          {
+            "date": "2025-02-01",
+            "problem_id": 19637,
+            "title": "IF문 좀 대신 써줘",
+            "url": "https://www.acmicpc.net/problem/19637"
+          },
+          {
+            "date": "2025-02-02",
+            "problem_id": 29159,
+            "title": "케이크 두 개",
+            "url": "https://www.acmicpc.net/problem/29159"
+          },
+          {
+            "date": "2025-02-03",
+            "problem_id": 1058,
+            "title": "친구",
+            "url": "https://www.acmicpc.net/problem/1058"
+          },
+          {
+            "date": "2025-02-04",
+            "problem_id": 30106,
+            "title": "현이의 로봇 청소기",
+            "url": "https://www.acmicpc.net/problem/30106"
+          },
+          {
+            "date": "2025-02-09",
+            "problem_id": 32982,
+            "title": "약물 복용",
+            "url": "https://www.acmicpc.net/problem/32982"
+          },
+          {
+            "date": "2025-02-10",
+            "problem_id": 17271,
+            "title": "리그 오브 레전설 (Small)",
+            "url": "https://www.acmicpc.net/problem/17271"
+          },
+          {
+            "date": "2025-02-11",
+            "problem_id": 28015,
+            "title": "영역 색칠",
+            "url": "https://www.acmicpc.net/problem/28015"
+          },
+          {
+            "date": "2025-02-12",
+            "problem_id": 31848,
+            "title": "엉성한 도토리 분류기",
+            "url": "https://www.acmicpc.net/problem/31848"
+          },
+          {
+            "date": "2025-02-14",
+            "problem_id": 11811,
+            "title": "데스스타",
+            "url": "https://www.acmicpc.net/problem/11811"
+          },
+          {
+            "date": "2025-02-15",
+            "problem_id": 5107,
+            "title": "마니또",
+            "url": "https://www.acmicpc.net/problem/5107"
+          },
+          {
+            "date": "2025-02-16",
+            "problem_id": 7348,
+            "title": "테이블 옮기기",
+            "url": "https://www.acmicpc.net/problem/7348"
+          },
+          {
+            "date": "2025-02-17",
+            "problem_id": 10899,
+            "title": "King of penalty",
+            "url": "https://www.acmicpc.net/problem/10899"
+          },
+          {
+            "date": "2025-02-18",
+            "problem_id": 20921,
+            "title": "그렇고 그런 사이",
+            "url": "https://www.acmicpc.net/problem/20921"
+          },
+          {
+            "date": "2025-02-19",
+            "problem_id": 9659,
+            "title": "돌 게임 5",
+            "url": "https://www.acmicpc.net/problem/9659"
+          },
+          {
+            "date": "2025-02-20",
+            "problem_id": 1606,
+            "title": "침투 계획 세우기",
+            "url": "https://www.acmicpc.net/problem/1606"
+          },
+          {
+            "date": "2025-02-21",
+            "problem_id": 17129,
+            "title": "윌리암슨수액빨이딱따구리가 정보섬에 올라온 이유",
+            "url": "https://www.acmicpc.net/problem/17129"
+          },
+          {
+            "date": "2025-02-22",
+            "problem_id": 9658,
+            "title": "돌 게임 4",
+            "url": "https://www.acmicpc.net/problem/9658"
+          },
+          {
+            "date": "2025-02-23",
+            "problem_id": 20365,
+            "title": "블로그2",
+            "url": "https://www.acmicpc.net/problem/20365"
+          },
+          {
+            "date": "2025-02-24",
+            "problem_id": 31535,
+            "title": "재우의 재수강 1",
+            "url": "https://www.acmicpc.net/problem/31535"
+          },
+          {
+            "date": "2025-02-25",
+            "problem_id": 27968,
+            "title": "사사의 사차원 사탕 봉지",
+            "url": "https://www.acmicpc.net/problem/27968"
+          },
+          {
+            "date": "2025-02-26",
+            "problem_id": 26090,
+            "title": "완전한 수열",
+            "url": "https://www.acmicpc.net/problem/26090"
+          },
+          {
+            "date": "2025-02-27",
+            "problem_id": 13412,
+            "title": "서로소 쌍",
+            "url": "https://www.acmicpc.net/problem/13412"
+          },
+          {
+            "date": "2025-02-28",
+            "problem_id": 9658,
+            "title": "외계인의 기타 연주",
+            "url": "https://www.acmicpc.net/problem/9658"
+          }
+        ],
+        "total_problems_count": 25,
+        "unsolved_count": 23,
+        "solved_percentage": 8.0
       },
       "nes128": {
         "name": "nes128",
@@ -1382,7 +2035,84 @@
             "title": "서로소 쌍",
             "url": "https://www.acmicpc.net/problem/13412"
           }
-        ]
+        ],
+        "unsolved_problems": [
+          {
+            "date": "2025-02-01",
+            "problem_id": 19637,
+            "title": "IF문 좀 대신 써줘",
+            "url": "https://www.acmicpc.net/problem/19637"
+          },
+          {
+            "date": "2025-02-02",
+            "problem_id": 29159,
+            "title": "케이크 두 개",
+            "url": "https://www.acmicpc.net/problem/29159"
+          },
+          {
+            "date": "2025-02-07",
+            "problem_id": 25957,
+            "title": "단어 우월 효과 (캠브릿지 대학의 연구결과)",
+            "url": "https://www.acmicpc.net/problem/25957"
+          },
+          {
+            "date": "2025-02-09",
+            "problem_id": 32982,
+            "title": "약물 복용",
+            "url": "https://www.acmicpc.net/problem/32982"
+          },
+          {
+            "date": "2025-02-15",
+            "problem_id": 5107,
+            "title": "마니또",
+            "url": "https://www.acmicpc.net/problem/5107"
+          },
+          {
+            "date": "2025-02-16",
+            "problem_id": 7348,
+            "title": "테이블 옮기기",
+            "url": "https://www.acmicpc.net/problem/7348"
+          },
+          {
+            "date": "2025-02-22",
+            "problem_id": 9658,
+            "title": "돌 게임 4",
+            "url": "https://www.acmicpc.net/problem/9658"
+          },
+          {
+            "date": "2025-02-23",
+            "problem_id": 20365,
+            "title": "블로그2",
+            "url": "https://www.acmicpc.net/problem/20365"
+          },
+          {
+            "date": "2025-02-24",
+            "problem_id": 31535,
+            "title": "재우의 재수강 1",
+            "url": "https://www.acmicpc.net/problem/31535"
+          },
+          {
+            "date": "2025-02-25",
+            "problem_id": 27968,
+            "title": "사사의 사차원 사탕 봉지",
+            "url": "https://www.acmicpc.net/problem/27968"
+          },
+          {
+            "date": "2025-02-26",
+            "problem_id": 26090,
+            "title": "완전한 수열",
+            "url": "https://www.acmicpc.net/problem/26090"
+          },
+          {
+            "date": "2025-02-28",
+            "problem_id": 9658,
+            "title": "외계인의 기타 연주",
+            "url": "https://www.acmicpc.net/problem/9658"
+          }
+        ],
+        "total_problems_count": 25,
+        "unsolved_count": 12,
+        "solved_percentage": 52.0
       },
       "ooo_0502": {
         "name": "ooo_0502",
@@ -1538,7 +2268,126 @@
             "title": "사사의 사차원 사탕 봉지",
             "url": "https://www.acmicpc.net/problem/27968"
           }
-        ]
+        ],
+        "unsolved_problems": [
+          {
+            "date": "2025-02-01",
+            "problem_id": 19637,
+            "title": "IF문 좀 대신 써줘",
+            "url": "https://www.acmicpc.net/problem/19637"
+          },
+          {
+            "date": "2025-02-02",
+            "problem_id": 29159,
+            "title": "케이크 두 개",
+            "url": "https://www.acmicpc.net/problem/29159"
+          },
+          {
+            "date": "2025-02-03",
+            "problem_id": 1058,
+            "title": "친구",
+            "url": "https://www.acmicpc.net/problem/1058"
+          },
+          {
+            "date": "2025-02-04",
+            "problem_id": 30106,
+            "title": "현이의 로봇 청소기",
+            "url": "https://www.acmicpc.net/problem/30106"
+          },
+          {
+            "date": "2025-02-05",
+            "problem_id": 23758,
+            "title": "중앙값 제거",
+            "url": "https://www.acmicpc.net/problem/23758"
+          },
+          {
+            "date": "2025-02-07",
+            "problem_id": 25957,
+            "title": "단어 우월 효과 (캠브릿지 대학의 연구결과)",
+            "url": "https://www.acmicpc.net/problem/25957"
+          },
+          {
+            "date": "2025-02-09",
+            "problem_id": 32982,
+            "title": "약물 복용",
+            "url": "https://www.acmicpc.net/problem/32982"
+          },
+          {
+            "date": "2025-02-12",
+            "problem_id": 31848,
+            "title": "엉성한 도토리 분류기",
+            "url": "https://www.acmicpc.net/problem/31848"
+          },
+          {
+            "date": "2025-02-14",
+            "problem_id": 11811,
+            "title": "데스스타",
+            "url": "https://www.acmicpc.net/problem/11811"
+          },
+          {
+            "date": "2025-02-15",
+            "problem_id": 5107,
+            "title": "마니또",
+            "url": "https://www.acmicpc.net/problem/5107"
+          },
+          {
+            "date": "2025-02-16",
+            "problem_id": 7348,
+            "title": "테이블 옮기기",
+            "url": "https://www.acmicpc.net/problem/7348"
+          },
+          {
+            "date": "2025-02-20",
+            "problem_id": 1606,
+            "title": "침투 계획 세우기",
+            "url": "https://www.acmicpc.net/problem/1606"
+          },
+          {
+            "date": "2025-02-21",
+            "problem_id": 17129,
+            "title": "윌리암슨수액빨이딱따구리가 정보섬에 올라온 이유",
+            "url": "https://www.acmicpc.net/problem/17129"
+          },
+          {
+            "date": "2025-02-22",
+            "problem_id": 9658,
+            "title": "돌 게임 4",
+            "url": "https://www.acmicpc.net/problem/9658"
+          },
+          {
+            "date": "2025-02-23",
+            "problem_id": 20365,
+            "title": "블로그2",
+            "url": "https://www.acmicpc.net/problem/20365"
+          },
+          {
+            "date": "2025-02-24",
+            "problem_id": 31535,
+            "title": "재우의 재수강 1",
+            "url": "https://www.acmicpc.net/problem/31535"
+          },
+          {
+            "date": "2025-02-26",
+            "problem_id": 26090,
+            "title": "완전한 수열",
+            "url": "https://www.acmicpc.net/problem/26090"
+          },
+          {
+            "date": "2025-02-27",
+            "problem_id": 13412,
+            "title": "서로소 쌍",
+            "url": "https://www.acmicpc.net/problem/13412"
+          },
+          {
+            "date": "2025-02-28",
+            "problem_id": 9658,
+            "title": "외계인의 기타 연주",
+            "url": "https://www.acmicpc.net/problem/9658"
+          }
+        ],
+        "total_problems_count": 25,
+        "unsolved_count": 19,
+        "solved_percentage": 24.0
       },
       "spacegg13": {
         "name": "spacegg13",
@@ -1748,7 +2597,84 @@
             "title": "서로소 쌍",
             "url": "https://www.acmicpc.net/problem/13412"
           }
-        ]
+        ],
+        "unsolved_problems": [
+          {
+            "date": "2025-02-02",
+            "problem_id": 29159,
+            "title": "케이크 두 개",
+            "url": "https://www.acmicpc.net/problem/29159"
+          },
+          {
+            "date": "2025-02-04",
+            "problem_id": 30106,
+            "title": "현이의 로봇 청소기",
+            "url": "https://www.acmicpc.net/problem/30106"
+          },
+          {
+            "date": "2025-02-05",
+            "problem_id": 23758,
+            "title": "중앙값 제거",
+            "url": "https://www.acmicpc.net/problem/23758"
+          },
+          {
+            "date": "2025-02-09",
+            "problem_id": 32982,
+            "title": "약물 복용",
+            "url": "https://www.acmicpc.net/problem/32982"
+          },
+          {
+            "date": "2025-02-16",
+            "problem_id": 7348,
+            "title": "테이블 옮기기",
+            "url": "https://www.acmicpc.net/problem/7348"
+          },
+          {
+            "date": "2025-02-19",
+            "problem_id": 9659,
+            "title": "돌 게임 5",
+            "url": "https://www.acmicpc.net/problem/9659"
+          },
+          {
+            "date": "2025-02-20",
+            "problem_id": 1606,
+            "title": "침투 계획 세우기",
+            "url": "https://www.acmicpc.net/problem/1606"
+          },
+          {
+            "date": "2025-02-21",
+            "problem_id": 17129,
+            "title": "윌리암슨수액빨이딱따구리가 정보섬에 올라온 이유",
+            "url": "https://www.acmicpc.net/problem/17129"
+          },
+          {
+            "date": "2025-02-22",
+            "problem_id": 9658,
+            "title": "돌 게임 4",
+            "url": "https://www.acmicpc.net/problem/9658"
+          },
+          {
+            "date": "2025-02-23",
+            "problem_id": 20365,
+            "title": "블로그2",
+            "url": "https://www.acmicpc.net/problem/20365"
+          },
+          {
+            "date": "2025-02-24",
+            "problem_id": 31535,
+            "title": "재우의 재수강 1",
+            "url": "https://www.acmicpc.net/problem/31535"
+          },
+          {
+            "date": "2025-02-28",
+            "problem_id": 9658,
+            "title": "외계인의 기타 연주",
+            "url": "https://www.acmicpc.net/problem/9658"
+          }
+        ],
+        "total_problems_count": 25,
+        "unsolved_count": 12,
+        "solved_percentage": 52.0
       },
       "taroguru": {
         "name": "taroguru",
@@ -1874,16 +2800,165 @@
             "title": "침투 계획 세우기",
             "url": "https://www.acmicpc.net/problem/1606"
           }
-        ]
+        ],
+        "unsolved_problems": [
+          {
+            "date": "2025-02-01",
+            "problem_id": 19637,
+            "title": "IF문 좀 대신 써줘",
+            "url": "https://www.acmicpc.net/problem/19637"
+          },
+          {
+            "date": "2025-02-02",
+            "problem_id": 29159,
+            "title": "케이크 두 개",
+            "url": "https://www.acmicpc.net/problem/29159"
+          },
+          {
+            "date": "2025-02-03",
+            "problem_id": 1058,
+            "title": "친구",
+            "url": "https://www.acmicpc.net/problem/1058"
+          },
+          {
+            "date": "2025-02-04",
+            "problem_id": 30106,
+            "title": "현이의 로봇 청소기",
+            "url": "https://www.acmicpc.net/problem/30106"
+          },
+          {
+            "date": "2025-02-05",
+            "problem_id": 23758,
+            "title": "중앙값 제거",
+            "url": "https://www.acmicpc.net/problem/23758"
+          },
+          {
+            "date": "2025-02-07",
+            "problem_id": 25957,
+            "title": "단어 우월 효과 (캠브릿지 대학의 연구결과)",
+            "url": "https://www.acmicpc.net/problem/25957"
+          },
+          {
+            "date": "2025-02-09",
+            "problem_id": 32982,
+            "title": "약물 복용",
+            "url": "https://www.acmicpc.net/problem/32982"
+          },
+          {
+            "date": "2025-02-10",
+            "problem_id": 17271,
+            "title": "리그 오브 레전설 (Small)",
+            "url": "https://www.acmicpc.net/problem/17271"
+          },
+          {
+            "date": "2025-02-11",
+            "problem_id": 28015,
+            "title": "영역 색칠",
+            "url": "https://www.acmicpc.net/problem/28015"
+          },
+          {
+            "date": "2025-02-12",
+            "problem_id": 31848,
+            "title": "엉성한 도토리 분류기",
+            "url": "https://www.acmicpc.net/problem/31848"
+          },
+          {
+            "date": "2025-02-14",
+            "problem_id": 11811,
+            "title": "데스스타",
+            "url": "https://www.acmicpc.net/problem/11811"
+          },
+          {
+            "date": "2025-02-15",
+            "problem_id": 5107,
+            "title": "마니또",
+            "url": "https://www.acmicpc.net/problem/5107"
+          },
+          {
+            "date": "2025-02-16",
+            "problem_id": 7348,
+            "title": "테이블 옮기기",
+            "url": "https://www.acmicpc.net/problem/7348"
+          },
+          {
+            "date": "2025-02-17",
+            "problem_id": 10899,
+            "title": "King of penalty",
+            "url": "https://www.acmicpc.net/problem/10899"
+          },
+          {
+            "date": "2025-02-18",
+            "problem_id": 20921,
+            "title": "그렇고 그런 사이",
+            "url": "https://www.acmicpc.net/problem/20921"
+          },
+          {
+            "date": "2025-02-19",
+            "problem_id": 9659,
+            "title": "돌 게임 5",
+            "url": "https://www.acmicpc.net/problem/9659"
+          },
+          {
+            "date": "2025-02-21",
+            "problem_id": 17129,
+            "title": "윌리암슨수액빨이딱따구리가 정보섬에 올라온 이유",
+            "url": "https://www.acmicpc.net/problem/17129"
+          },
+          {
+            "date": "2025-02-22",
+            "problem_id": 9658,
+            "title": "돌 게임 4",
+            "url": "https://www.acmicpc.net/problem/9658"
+          },
+          {
+            "date": "2025-02-23",
+            "problem_id": 20365,
+            "title": "블로그2",
+            "url": "https://www.acmicpc.net/problem/20365"
+          },
+          {
+            "date": "2025-02-24",
+            "problem_id": 31535,
+            "title": "재우의 재수강 1",
+            "url": "https://www.acmicpc.net/problem/31535"
+          },
+          {
+            "date": "2025-02-25",
+            "problem_id": 27968,
+            "title": "사사의 사차원 사탕 봉지",
+            "url": "https://www.acmicpc.net/problem/27968"
+          },
+          {
+            "date": "2025-02-26",
+            "problem_id": 26090,
+            "title": "완전한 수열",
+            "url": "https://www.acmicpc.net/problem/26090"
+          },
+          {
+            "date": "2025-02-27",
+            "problem_id": 13412,
+            "title": "서로소 쌍",
+            "url": "https://www.acmicpc.net/problem/13412"
+          },
+          {
+            "date": "2025-02-28",
+            "problem_id": 9658,
+            "title": "외계인의 기타 연주",
+            "url": "https://www.acmicpc.net/problem/9658"
+          }
+        ],
+        "total_problems_count": 25,
+        "unsolved_count": 24,
+        "solved_percentage": 4.0
       }
     }
   },
   "all_time_stats": {
     "finalboss_kim": {
       "name": "finalboss_kim",
-      "total_solved": 34,
-      "total_attempted": 34,
-      "total_penalty": 8,
+      "total_solved": 35,
+      "total_attempted": 35,
+      "total_penalty": 7,
       "medals": [
         {
           "month": "2025-03",
