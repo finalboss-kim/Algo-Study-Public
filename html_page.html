@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>백준 알고리즘 스터디 통계</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4361ee;
+            --secondary-color: #3f37c9;
+            --accent-color: #4895ef;
+            --success-color: #4cc9f0;
+            --warning-color: #f72585;
+            --gold-color: #ffd700;
+            --silver-color: #c0c0c0;
+            --bronze-color: #cd7f32;
+            --light-bg: #f8f9fa;
+            --dark-bg: #212529;
+            --text-color: #343a40;
+            --light-text: #f8f9fa;
+            --gray-text: #6c757d;
+            --border-color: #dee2e6;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        h1, h2, h3, h4 {
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .section {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .section-title h2 {
+            margin-bottom: 0;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-left: 5px solid var(--primary-color);
+        }
+        
+        .user-rank-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        
+        .user-rank-table th,
+        .user-rank-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .user-rank-table th {
+            background-color: var(--light-bg);
+            font-weight: 500;
+        }
+        
+        .user-rank-table tbody tr:hover {
+            background-color: rgba(67, 97, 238, 0.05);
+        }
+        
+        .medal {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            margin-right: 5px;
+            color: var(--dark-bg);
+            font-weight: bold;
+        }
+        
+        .gold {
+            background-color: var(--gold-color);
+        }
+        
+        .silver {
+            background-color: var(--silver-color);
+        }
+        
+        .bronze {
+            background-color: var(--bronze-color);
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.25em 0.6em;
+            font-size: 0.75rem;
+            font-weight: 500;
+            line-height: 1;
+            color: white;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: 0.25rem;
+            margin-right: 0.5rem;
+        }
+        
+        .badge-primary {
+            background-color: var(--primary-color);
+        }
+        
+        .badge-success {
+            background-color: var(--success-color);
+        }
+        
+        .badge-warning {
+            background-color: var(--warning-color);
+        }
+        
+        .badge-info {
+            background-color: var(--accent-color);
+        }
+        
+        .tab-container {
+            margin: 1rem 0;
+        }
+        
+        .tab-buttons {
+            display: flex;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 1rem;
+        }
+        
+        .tab-button {
+            background-color: transparent;
+            border: none;
+            padding: 0.5rem 1rem;
+            margin-right: 0.5rem;
+            cursor: pointer;
+            font-weight: 500;
+            position: relative;
+            color: var(--text-color);
+        }
+        
+        .tab-button.active {
+            color: var(--primary-color);
+        }
+        
+        .tab-button.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary-color);
+            border-radius: 3px 3px 0 0;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .progress-container {
+            background-color: var(--light-bg);
+            border-radius: 4px;
+            height: 8px;
+            overflow: hidden;
+            margin: 0.5rem 0;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background-color: var(--primary-color);
+        }
+        
+        .problem-pill {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            background-color: var(--light-bg);
+            border-radius: 4px;
+            margin: 0.2rem;
+            font-size: 0.85rem;
+            cursor: pointer;
+        }
+        
+        .problem-pill:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+        
+        .problem-pill.solved {
+            background-color: var(--success-color);
+            color: white;
+        }
+        
+        .problem-pill.attempted {
+            background-color: var(--accent-color);
+            color: white;
+        }
+        
+        .problem-pill.missed {
+            background-color: var(--warning-color);
+            color: white;
+        }
+        
+        .user-selector {
+            margin-bottom: 1rem;
+        }
+        
+        .user-select {
+            padding: 0.5rem;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            width: 100%;
+            max-width: 300px;
+        }
+        
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .tooltip .tooltip-text {
+            visibility: hidden;
+            width: 200px;
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .medal-collection {
+            margin-top: 1rem;
+        }
+        
+        .medal-icon {
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+            cursor: pointer;
+        }
+        
+        .summary-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .stat-card {
+            flex: 1;
+            min-width: 150px;
+            background-color: white;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+        
+        .stat-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-card .value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .stat-card .text {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 0.25rem;
+        }
+        
+        @media (max-width: 768px) {
+            .tab-buttons {
+                flex-wrap: wrap;
+            }
+            
+            .summary-stats {
+                flex-direction: column;
+            }
+            
+            .stat-card {
+                width: 100%;
+            }
+        }
+
+        #loadingOverlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-left-color: var(--primary-color);
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div id="loadingOverlay">
+        <div class="spinner"></div>
+    </div>
+
+    <header>
+        <div class="container">
+            <h1>백준 알고리즘 스터디 통계</h1>
+            <p>그룹 ID: 22703</p>
+            <div id="currentDate"></div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- 현재 월 요약 섹션 -->
+        <section class="section" id="currentMonthSummary">
+            <div class="section-title">
+                <h2>이번 달 요약</h2>
+                <div id="currentMonthDisplay"></div>
+            </div>
+            <div class="summary-stats">
+                <div class="stat-card">
+                    <h3>문제 풀이 1등</h3>
+                    <div class="value" id="currentMonthSolvedFirst">-</div>
+                </div>
+                <div class="stat-card">
+                    <h3>패널티 최다</h3>
+                    <div class="value" id="currentMonthPenaltyFirst">-</div>
+                </div>
+                <div class="stat-card">
+                    <h3>남은 일수</h3>
+                    <div class="value" id="daysLeft">-</div>
+                    <div class="text">달성 목표까지</div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>이번 달 랭킹</h3>
+                <table class="user-rank-table" id="currentMonthRanking">
+                    <thead>
+                        <tr>
+                            <th>순위</th>
+                            <th>이름</th>
+                            <th>맞힌 문제</th>
+                            <th>시도한 문제</th>
+                            <th>패널티</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 여기에 동적으로 데이터가 채워집니다 -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 이전 달 요약 섹션 -->
+        <section class="section" id="previousMonthSummary">
+            <div class="section-title">
+                <h2>지난 달 요약</h2>
+                <div id="previousMonthDisplay"></div>
+            </div>
+            <div class="card">
+                <h3>지난 달 메달리스트</h3>
+                <div class="summary-stats">
+                    <div class="stat-card">
+                        <h3>🥇 금메달</h3>
+                        <div class="value" id="prevMonthGold">-</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>🥈 은메달</h3>
+                        <div class="value" id="prevMonthSilver">-</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>🥉 동메달</h3>
+                        <div class="value" id="prevMonthBronze">-</div>
+                    </div>
+                </div>
+                <div id="prevMonthPenaltyInfo">
+                    <h3>지난 달 랭킹</h3>
+                    <table class="user-rank-table" id="previousMonthRanking">
+                        <thead>
+                            <tr>
+                                <th>순위</th>
+                                <th>이름</th>
+                                <th>맞힌 문제</th>
+                                <th>시도한 문제</th>
+                                <th>패널티</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- 여기에 동적으로 데이터가 채워집니다 -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 명예의 전당 섹션 -->
+        <section class="section" id="hallOfFame">
+            <div class="section-title">
+                <h2>명예의 전당</h2>
+            </div>
+            <div class="card">
+                <h3>전체 기록</h3>
+                <table class="user-rank-table" id="allTimeRanking">
+                    <thead>
+                        <tr>
+                            <th>순위</th>
+                            <th>이름</th>
+                            <th>총 맞힌 문제</th>
+                            <th>총 시도한 문제</th>
+                            <th>메달 현황</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 여기에 동적으로 데이터가 채워집니다 -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 개인 통계 섹션 -->
+        <section class="section" id="userStats">
+            <div class="section-title">
+                <h2>개인 통계</h2>
+            </div>
+            <div class="user-selector">
+                <label for="userSelect">사용자 선택:</label>
+                <select id="userSelect" class="user-select">
+                    <option value="">사용자를 선택하세요</option>
+                </select>
+            </div>
+            <div id="userStatsContent" style="display:none;">
+                <div class="summary-stats">
+                    <div class="stat-card">
+                        <h3>맞힌 문제</h3>
+                        <div class="value" id="userSolvedCount">-</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>시도한 문제</h3>
+                        <div class="value" id="userAttemptedCount">-</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>패널티</h3>
+                        <div class="value" id="userPenaltyCount">-</div>
+                    </div>
+                </div>
+                <div class="medal-collection">
+                    <h3>획득한 메달</h3>
+                    <div id="userMedals">메달 없음</div>
+                </div>
+                <div class="tab-container">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="monthlyTab">이번 달</button>
+                        <button class="tab-button" data-tab="allTimeTab">전체 기간</button>
+                    </div>
+                    <div class="tab-content active" id="monthlyTab">
+                        <h3>이번 달 문제 현황</h3>
+                        <div>
+                            <h4>맞힌 문제</h4>
+                            <div id="userMonthlySolved" class="problem-list">로딩 중...</div>
+                        </div>
+                        <div>
+                            <h4>시도한 문제</h4>
+                            <div id="userMonthlyAttempted" class="problem-list">로딩 중...</div>
+                        </div>
+                        <div>
+                            <h4>패널티 문제</h4>
+                            <div id="userMonthlyMissed" class="problem-list">로딩 중...</div>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="allTimeTab">
+                        <h3>전체 기간 문제 현황</h3>
+                        <div class="progress-container">
+                            <div id="userOverallProgress" class="progress-bar" style="width: 0%"></div>
+                        </div>
+                        <div id="userOverallStat">
+                            <p>총 <span id="totalProblems">0</span>개 문제 중 <span id="userTotalSolved">0</span>개 맞힘 (<span id="userSolvedPercentage">0</span>%)</p>
+                        </div>
+                        <div class="medal-collection">
+                            <h4>메달 획득 내역</h4>
+                            <div id="userAllMedals">메달 없음</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 백준 알고리즘 스터디 그룹 - 22703</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 페이지 내의 탭 기능 활성화
+            const tabButtons = document.querySelectorAll('.tab-button');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const tabId = this.getAttribute('data-tab');
+                    
+                    // 모든 탭 버튼 비활성화
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    // 현재 버튼 활성화
+                    this.classList.add('active');
+                    
+                    // 모든 탭 내용 숨기기
+                    document.querySelectorAll('.tab-content').forEach(content => {
+                        content.classList.remove('active');
+                    });
+                    
+                    // 선택된 탭 내용 표시
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            // GitHub에서 JSON 데이터 가져오기
+            fetch('https://raw.githubusercontent.com/finalboss-kim/Algo-Study-Public/main/algo_stats.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('GitHub에서 JSON 파일을 불러올 수 없습니다 (HTTP ' + response.status + ')');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // 데이터 로딩 완료 처리
+                    document.getElementById('loadingOverlay').style.display = 'none';
+                    
+                    // 데이터 표시 함수 호출
+                    populateData(data);
+                })
+                .catch(error => {
+                    console.error('데이터 로드 오류:', error);
+                    document.getElementById('loadingOverlay').innerHTML = 
+                        '<div style="text-align: center; color: red;">' +
+                        '<h2>데이터 로드 오류</h2>' +
+                        '<p>' + error.message + '</p>' +
+                        '</div>';
+                });
+            
+            // 데이터를 화면에 표시하는 함수
+            function populateData(data) {
+                // 현재 날짜 표시
+                if (data.current_date) {
+                    document.getElementById('currentDate').textContent = 
+                        `${data.current_date.year}년 ${data.current_date.month}월 ${data.current_date.day}일 기준`;
+                    
+                    // 현재 월 표시
+                    const currentMonth = `${data.current_date.year}-${String(data.current_date.month).padStart(2, '0')}`;
+                    document.getElementById('currentMonthDisplay').textContent = 
+                        `${data.current_date.year}년 ${data.current_date.month}월`;
+                    
+                    // 이전 월 계산 및 표시
+                    let prevMonth, prevYear;
+                    if (data.current_date.month === 1) {
+                        prevMonth = 12;
+                        prevYear = data.current_date.year - 1;
+                    } else {
+                        prevMonth = data.current_date.month - 1;
+                        prevYear = data.current_date.year;
+                    }
+                    const prevMonthKey = `${prevYear}-${String(prevMonth).padStart(2, '0')}`;
+                    document.getElementById('previousMonthDisplay').textContent = 
+                        `${prevYear}년 ${prevMonth}월`;
+                    
+                    // 남은 일수 계산
+                    const now = new Date();
+                    const lastDay = new Date(data.current_date.year, data.current_date.month, 0).getDate();
+                    const daysLeft = lastDay - data.current_date.day;
+                    document.getElementById('daysLeft').textContent = daysLeft;
+                    
+                    // 이번 달 랭킹 표시
+                    if (data.monthly_stats && data.monthly_stats[currentMonth]) {
+                        const currentMonthData = data.monthly_stats[currentMonth];
+                        const tbody = document.getElementById('currentMonthRanking').querySelector('tbody');
+                        tbody.innerHTML = '';
+                        
+                        // 사용자 정보 정렬
+                        const sortedUsers = Object.entries(currentMonthData)
+                            .sort((a, b) => b[1].solved_count - a[1].solved_count);
+                        
+                        // 1등 정보 표시
+                        if (sortedUsers.length > 0) {
+                            const [topUserId, topUserData] = sortedUsers[0];
+                            document.getElementById('currentMonthSolvedFirst').innerHTML = 
+                                `<div style="font-size: 1.4rem; font-weight: bold;">${topUserData.name}</div>
+                                <div class="text">맞힌 문제 수: ${topUserData.solved_count}개</div>`;
+                        } else {
+                            document.getElementById('currentMonthSolvedFirst').textContent = "-";
+                        }
+
+                        // 패널티 최다 정보 표시 (10개 이상인 경우만)
+                        const highPenaltyUsers = Object.entries(currentMonthData)
+                            .filter(([_, userData]) => userData.penalty_count >= 10)
+                            .sort((a, b) => b[1].penalty_count - a[1].penalty_count);
+
+                        if (highPenaltyUsers.length > 0) {
+                            const maxPenalty = highPenaltyUsers[0][1].penalty_count;
+                            const sameMaxPenaltyUsers = highPenaltyUsers.filter(([_, userData]) => userData.penalty_count === maxPenalty);
+                            
+                            // 동일한 최대 패널티를 가진 모든 사용자 표시
+                            const penaltyHtml = sameMaxPenaltyUsers.map(([_, userData]) => 
+                                `<div style="font-size: 1.4rem; font-weight: bold;">${userData.name}</div>
+                                <div class="text">패널티 수: ${userData.penalty_count}개</div>`
+                            ).join('<div style="margin: 0.5rem 0;"></div>');
+                            
+                            document.getElementById('currentMonthPenaltyFirst').innerHTML = penaltyHtml;
+                        } else {
+                            document.getElementById('currentMonthPenaltyFirst').textContent = "-";
+                        }
+                        
+                        // 테이블에 사용자 정보 추가
+                        sortedUsers.forEach((entry, index) => {
+                            const [userId, userData] = entry;
+                            const row = document.createElement('tr');
+                            
+                            row.innerHTML = `
+                                <td>${index + 1}</td>
+                                <td>${userData.name}</td>
+                                <td>${userData.solved_count}</td>
+                                <td>${userData.attempted_count}</td>
+                                <td>${userData.penalty_count}</td>
+                            `;
+                            
+                            tbody.appendChild(row);
+                        });
+                    }
+                    
+                    // 지난 달 정보 표시
+                    if (data.monthly_stats && data.monthly_stats[prevMonthKey]) {
+                        const prevMonthData = data.monthly_stats[prevMonthKey];
+                        
+                        // 메달리스트 표시
+                        const sortedPrevUsers = Object.entries(prevMonthData)
+                            .sort((a, b) => b[1].solved_count - a[1].solved_count);
+                        
+                        if (sortedPrevUsers.length > 0) {
+                            // 금메달
+                            const goldUser = sortedPrevUsers[0][1];
+                            document.getElementById('prevMonthGold').textContent = goldUser.name;
+                            
+                            // 은메달
+                            if (sortedPrevUsers.length > 1) {
+                                const silverUser = sortedPrevUsers[1][1];
+                                document.getElementById('prevMonthSilver').textContent = silverUser.name;
+                            }
+                            
+                            // 동메달
+                            if (sortedPrevUsers.length > 2) {
+                                const bronzeUser = sortedPrevUsers[2][1];
+                                document.getElementById('prevMonthBronze').textContent = bronzeUser.name;
+                            }
+                        }
+                        
+                        // 지난 달 랭킹 테이블
+                        const prevMonthTbody = document.getElementById('previousMonthRanking').querySelector('tbody');
+                        prevMonthTbody.innerHTML = '';
+                        
+                        sortedPrevUsers.forEach((entry, index) => {
+                            const [userId, userData] = entry;
+                            const row = document.createElement('tr');
+                            
+                            row.innerHTML = `
+                                <td>${index + 1}</td>
+                                <td>${userData.name}</td>
+                                <td>${userData.solved_count}</td>
+                                <td>${userData.attempted_count}</td>
+                                <td>${userData.penalty_count}</td>
+                            `;
+                            
+                            prevMonthTbody.appendChild(row);
+                        });
+                    }
+                    
+                    // 전체 기록 표시
+                    if (data.all_time_stats) {
+                        const allTimeData = data.all_time_stats;
+                        const allTimeTbody = document.getElementById('allTimeRanking').querySelector('tbody');
+                        allTimeTbody.innerHTML = '';
+                        
+                        // 사용자 정보 정렬
+                        const sortedAllTimeUsers = Object.entries(allTimeData)
+                            .sort((a, b) => b[1].total_solved - a[1].total_solved);
+                        
+                        // 테이블에 사용자 정보 추가
+                        sortedAllTimeUsers.forEach((entry, index) => {
+                            const [userId, userData] = entry;
+                            const row = document.createElement('tr');
+                            
+                            // 메달 표시
+                            let medalHtml = '';
+                            if (userData.medals && userData.medals.length > 0) {
+                                userData.medals.forEach(medal => {
+                                    let medalClass = '';
+                                    let medalIcon = '';
+                                    
+                                    if (medal.rank === 1) {
+                                        medalClass = 'gold';
+                                        medalIcon = '🥇';
+                                    } else if (medal.rank === 2) {
+                                        medalClass = 'silver';
+                                        medalIcon = '🥈';
+                                    } else if (medal.rank === 3) {
+                                        medalClass = 'bronze';
+                                        medalIcon = '🥉';
+                                    }
+                                    
+                                    if (medalClass) {
+                                        medalHtml += `<span class="medal ${medalClass}" title="${medal.month}: ${medal.rank}등">${medalIcon}</span>`;
+                                    }
+                                });
+                            } else {
+                                medalHtml = '-';
+                            }
+                            
+                            row.innerHTML = `
+                                <td>${index + 1}</td>
+                                <td>${userData.name}</td>
+                                <td>${userData.total_solved}</td>
+                                <td>${userData.total_attempted}</td>
+                                <td>${medalHtml}</td>
+                            `;
+                            
+                            allTimeTbody.appendChild(row);
+                        });
+                    }
+                    
+                    // 사용자 선택기 채우기
+                    const userSelect = document.getElementById('userSelect');
+                    userSelect.innerHTML = '<option value="">사용자를 선택하세요</option>';
+                    
+                    if (data.all_time_stats) {
+                        const users = Object.values(data.all_time_stats)
+                            .sort((a, b) => a.name.localeCompare(b.name));
+                        
+                        users.forEach(user => {
+                            const option = document.createElement('option');
+                            option.value = user.name;
+                            option.textContent = user.name;
+                            userSelect.appendChild(option);
+                        });
+                    }
+                    
+                    // 사용자 변경 이벤트 처리
+                    userSelect.addEventListener('change', function() {
+                        const selectedUser = this.value;
+                        
+                        if (selectedUser) {
+                            // 사용자 정보 표시
+                            showUserStats(selectedUser);
+                        } else {
+                            // 사용자 선택 안 됨, 내용 숨기기
+                            document.getElementById('userStatsContent').style.display = 'none';
+                        }
+                    });
+                    
+                    // 사용자 통계 표시 함수
+                    function showUserStats(userName) {
+                        const allTimeData = data.all_time_stats[userName];
+                        const currentMonthData = data.monthly_stats[currentMonth][userName];
+                        
+                        if (allTimeData && currentMonthData) {
+                            // 사용자 통계 컨텐츠 표시
+                            document.getElementById('userStatsContent').style.display = 'block';
+                            
+                            // 기본 통계 표시
+                            document.getElementById('userSolvedCount').textContent = allTimeData.total_solved;
+                            document.getElementById('userAttemptedCount').textContent = allTimeData.total_attempted;
+                            document.getElementById('userPenaltyCount').textContent = allTimeData.total_penalty;
+                            
+                            // 메달 표시
+                            if (allTimeData.medals && allTimeData.medals.length > 0) {
+                                let medalsHtml = '';
+                                allTimeData.medals.forEach(medal => {
+                                    let medalIcon = '';
+                                    if (medal.rank === 1) medalIcon = '🥇';
+                                    else if (medal.rank === 2) medalIcon = '🥈';
+                                    else if (medal.rank === 3) medalIcon = '🥉';
+                                    
+                                    medalsHtml += `<span class="medal-icon" title="${medal.month}: ${medal.rank}등">${medalIcon}</span>`;
+                                });
+                                document.getElementById('userMedals').innerHTML = medalsHtml;
+                                document.getElementById('userAllMedals').innerHTML = medalsHtml;
+                            } else {
+                                document.getElementById('userMedals').textContent = '메달 없음';
+                                document.getElementById('userAllMedals').textContent = '메달 없음';
+                            }
+                            
+                            // 이번 달 문제 표시
+                            if (currentMonthData.solved_problems && currentMonthData.solved_problems.length > 0) {
+                                let solvedHtml = '';
+                                currentMonthData.solved_problems.forEach(problem => {
+                                    solvedHtml += `<a href="${problem.url}" target="_blank" class="problem-pill solved">${problem.title}</a>`;
+                                });
+                                document.getElementById('userMonthlySolved').innerHTML = solvedHtml;
+                            } else {
+                                document.getElementById('userMonthlySolved').textContent = '맞힌 문제 없음';
+                            }
+                            
+                            if (currentMonthData.attempted_problems && currentMonthData.attempted_problems.length > 0) {
+                                let attemptedHtml = '';
+                                currentMonthData.attempted_problems.forEach(problem => {
+                                    attemptedHtml += `<a href="${problem.url}" target="_blank" class="problem-pill attempted">${problem.title}</a>`;
+                                });
+                                document.getElementById('userMonthlyAttempted').innerHTML = attemptedHtml;
+                            } else {
+                                document.getElementById('userMonthlyAttempted').textContent = '시도한 문제 없음';
+                            }
+                            
+                            if (currentMonthData.missed_problems && currentMonthData.missed_problems.length > 0) {
+                                let missedHtml = '';
+                                currentMonthData.missed_problems.forEach(problem => {
+                                    missedHtml += `<a href="${problem.url}" target="_blank" class="problem-pill missed">${problem.title}</a>`;
+                                });
+                                document.getElementById('userMonthlyMissed').innerHTML = missedHtml;
+                            } else {
+                                document.getElementById('userMonthlyMissed').textContent = '패널티 문제 없음';
+                            }
+                            
+                            // 전체 진행도 표시
+                            const problemsTotal = countTotalProblems(data);
+                            document.getElementById('totalProblems').textContent = problemsTotal;
+                            document.getElementById('userTotalSolved').textContent = allTimeData.total_solved;
+                            
+                            const solvedPercentage = ((allTimeData.total_solved / problemsTotal) * 100).toFixed(1);
+                            document.getElementById('userSolvedPercentage').textContent = solvedPercentage;
+                            document.getElementById('userOverallProgress').style.width = `${solvedPercentage}%`;
+                        }
+                    }
+                    
+                    // 전체 문제 수 계산 함수
+                    function countTotalProblems(data) {
+                        let total = 0;
+                        const processedProblems = new Set();
+                        
+                        // 현재 날짜까지의 문제만 계산
+                        for (const dateKey in data.problems) {
+                            const dateParts = dateKey.split('-').map(Number);
+                            const problemDate = new Date(dateParts[0], dateParts[1] - 1, dateParts[2]);
+                            const currentDate = new Date(data.current_date.year, data.current_date.month - 1, data.current_date.day);
+                            
+                            if (problemDate <= currentDate) {
+                                const problemId = data.problems[dateKey].problem_id;
+                                if (!processedProblems.has(problemId)) {
+                                    processedProblems.add(problemId);
+                                    total++;
+                                }
+                            }
+                        }
+                        
+                        return total;
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
