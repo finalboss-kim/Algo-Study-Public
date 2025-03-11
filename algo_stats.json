@@ -5,6 +5,137 @@
         "name": "finalboss_kim",
         "solved_count": 4,
         "attempted_count": 4,
+        "penalty_count": 3,
+        "missed_problems": [
+          {
+            "date": "2025-03-10",
+            "problem_id": 1593,
+            "title": "문자 해독",
+            "url": "https://www.acmicpc.net/problem/1593"
+          },
+          {
+            "date": "2025-03-11",
+            "problem_id": 1051,
+            "title": "숫자 정사각형",
+            "url": "https://www.acmicpc.net/problem/1051"
+          },
+          {
+            "date": "2025-03-12",
+            "problem_id": 1419,
+            "title": "등차수열의 합",
+            "url": "https://www.acmicpc.net/problem/1419"
+          }
+        ],
+        "solved_problems": [
+          {
+            "date": "2025-03-04",
+            "problem_id": 32142,
+            "title": "서바이벌",
+            "url": "https://www.acmicpc.net/problem/32142"
+          },
+          {
+            "date": "2025-03-05",
+            "problem_id": 20364,
+            "title": "부동산 다툼",
+            "url": "https://www.acmicpc.net/problem/20364"
+          },
+          {
+            "date": "2025-03-06",
+            "problem_id": 2108,
+            "title": "통계학",
+            "url": "https://www.acmicpc.net/problem/2108"
+          },
+          {
+            "date": "2025-03-07",
+            "problem_id": 32282,
+            "title": "너 그리고 나 (NAVILLERA)",
+            "url": "https://www.acmicpc.net/problem/32282"
+          }
+        ],
+        "attempted_problems": [
+          {
+            "date": "2025-03-04",
+            "problem_id": 32142,
+            "title": "서바이벌",
+            "url": "https://www.acmicpc.net/problem/32142"
+          },
+          {
+            "date": "2025-03-05",
+            "problem_id": 20364,
+            "title": "부동산 다툼",
+            "url": "https://www.acmicpc.net/problem/20364"
+          },
+          {
+            "date": "2025-03-06",
+            "problem_id": 2108,
+            "title": "통계학",
+            "url": "https://www.acmicpc.net/problem/2108"
+          },
+          {
+            "date": "2025-03-07",
+            "problem_id": 32282,
+            "title": "너 그리고 나 (NAVILLERA)",
+            "url": "https://www.acmicpc.net/problem/32282"
+          }
+        ],
+        "unsolved_problems": [
+          {
+            "date": "2025-03-01",
+            "problem_id": 2205,
+            "title": "저울 추 만들기",
+            "url": "https://www.acmicpc.net/problem/2205"
+          },
+          {
+            "date": "2025-03-02",
+            "problem_id": 2792,
+            "title": "보석 상자",
+            "url": "https://www.acmicpc.net/problem/2792"
+          },
+          {
+            "date": "2025-03-03",
+            "problem_id": 14731,
+            "title": "謎紛芥索紀 (Large)",
+            "url": "https://www.acmicpc.net/problem/14731"
+          },
+          {
+            "date": "2025-03-08",
+            "problem_id": 1248,
+            "title": "Guess",
+            "url": "https://www.acmicpc.net/problem/1248"
+          },
+          {
+            "date": "2025-03-09",
+            "problem_id": 1612,
+            "title": "가지고 노는 1",
+            "url": "https://www.acmicpc.net/problem/1612"
+          },
+          {
+            "date": "2025-03-10",
+            "problem_id": 1593,
+            "title": "문자 해독",
+            "url": "https://www.acmicpc.net/problem/1593"
+          },
+          {
+            "date": "2025-03-11",
+            "problem_id": 1051,
+            "title": "숫자 정사각형",
+            "url": "https://www.acmicpc.net/problem/1051"
+          },
+          {
+            "date": "2025-03-12",
+            "problem_id": 1419,
+            "title": "등차수열의 합",
+            "url": "https://www.acmicpc.net/problem/1419"
+          }
+        ],
+        "total_problems_count": 12,
+        "unsolved_count": 8,
+        "solved_percentage": 33.33
+      },
+      "741u741": {
+        "name": "741u741",
+        "solved_count": 9,
+        "attempted_count": 9,
         "penalty_count": 2,
         "missed_problems": [
           {
@@ -14,123 +145,10 @@
             "url": "https://www.acmicpc.net/problem/1593"
           },
           {
-            "date": "2025-03-11",
-            "problem_id": 1051,
-            "title": "숫자 정사각형",
-            "url": "https://www.acmicpc.net/problem/1051"
-          }
-        ],
-        "solved_problems": [
-          {
-            "date": "2025-03-04",
-            "problem_id": 32142,
-            "title": "서바이벌",
-            "url": "https://www.acmicpc.net/problem/32142"
-          },
-          {
-            "date": "2025-03-05",
-            "problem_id": 20364,
-            "title": "부동산 다툼",
-            "url": "https://www.acmicpc.net/problem/20364"
-          },
-          {
-            "date": "2025-03-06",
-            "problem_id": 2108,
-            "title": "통계학",
-            "url": "https://www.acmicpc.net/problem/2108"
-          },
-          {
-            "date": "2025-03-07",
-            "problem_id": 32282,
-            "title": "너 그리고 나 (NAVILLERA)",
-            "url": "https://www.acmicpc.net/problem/32282"
-          }
-        ],
-        "attempted_problems": [
-          {
-            "date": "2025-03-04",
-            "problem_id": 32142,
-            "title": "서바이벌",
-            "url": "https://www.acmicpc.net/problem/32142"
-          },
-          {
-            "date": "2025-03-05",
-            "problem_id": 20364,
-            "title": "부동산 다툼",
-            "url": "https://www.acmicpc.net/problem/20364"
-          },
-          {
-            "date": "2025-03-06",
-            "problem_id": 2108,
-            "title": "통계학",
-            "url": "https://www.acmicpc.net/problem/2108"
-          },
-          {
-            "date": "2025-03-07",
-            "problem_id": 32282,
-            "title": "너 그리고 나 (NAVILLERA)",
-            "url": "https://www.acmicpc.net/problem/32282"
-          }
-        ],
-        "unsolved_problems": [
-          {
-            "date": "2025-03-01",
-            "problem_id": 2205,
-            "title": "저울 추 만들기",
-            "url": "https://www.acmicpc.net/problem/2205"
-          },
-          {
-            "date": "2025-03-02",
-            "problem_id": 2792,
-            "title": "보석 상자",
-            "url": "https://www.acmicpc.net/problem/2792"
-          },
-          {
-            "date": "2025-03-03",
-            "problem_id": 14731,
-            "title": "謎紛芥索紀 (Large)",
-            "url": "https://www.acmicpc.net/problem/14731"
-          },
-          {
-            "date": "2025-03-08",
-            "problem_id": 1248,
-            "title": "Guess",
-            "url": "https://www.acmicpc.net/problem/1248"
-          },
-          {
-            "date": "2025-03-09",
-            "problem_id": 1612,
-            "title": "가지고 노는 1",
-            "url": "https://www.acmicpc.net/problem/1612"
-          },
-          {
-            "date": "2025-03-10",
-            "problem_id": 1593,
-            "title": "문자 해독",
-            "url": "https://www.acmicpc.net/problem/1593"
-          },
-          {
-            "date": "2025-03-11",
-            "problem_id": 1051,
-            "title": "숫자 정사각형",
-            "url": "https://www.acmicpc.net/problem/1051"
-          }
-        ],
-        "total_problems_count": 11,
-        "unsolved_count": 7,
-        "solved_percentage": 36.36
-      },
-      "741u741": {
-        "name": "741u741",
-        "solved_count": 9,
-        "attempted_count": 9,
-        "penalty_count": 1,
-        "missed_problems": [
-          {
-            "date": "2025-03-10",
-            "problem_id": 1593,
-            "title": "문자 해독",
-            "url": "https://www.acmicpc.net/problem/1593"
+            "date": "2025-03-12",
+            "problem_id": 1419,
+            "title": "등차수열의 합",
+            "url": "https://www.acmicpc.net/problem/1419"
           }
         ],
         "solved_problems": [
@@ -257,17 +275,23 @@
             "problem_id": 1593,
             "title": "문자 해독",
             "url": "https://www.acmicpc.net/problem/1593"
+          },
+          {
+            "date": "2025-03-12",
+            "problem_id": 1419,
+            "title": "등차수열의 합",
+            "url": "https://www.acmicpc.net/problem/1419"
           }
         ],
-        "total_problems_count": 11,
-        "unsolved_count": 2,
-        "solved_percentage": 81.82
+        "total_problems_count": 12,
+        "unsolved_count": 3,
+        "solved_percentage": 75.0
       },
       "inu519": {
         "name": "inu519",
         "solved_count": 1,
         "attempted_count": 1,
-        "penalty_count": 6,
+        "penalty_count": 7,
         "missed_problems": [
           {
             "date": "2025-03-04",
@@ -304,6 +328,12 @@
             "problem_id": 1051,
             "title": "숫자 정사각형",
             "url": "https://www.acmicpc.net/problem/1051"
+          },
+          {
+            "date": "2025-03-12",
+            "problem_id": 1419,
+            "title": "등차수열의 합",
+            "url": "https://www.acmicpc.net/problem/1419"
           }
         ],
         "solved_problems": [
@@ -382,17 +412,23 @@
             "problem_id": 1051,
             "title": "숫자 정사각형",
             "url": "https://www.acmicpc.net/problem/1051"
+          },
+          {
+            "date": "2025-03-12",
+            "problem_id": 1419,
+            "title": "등차수열의 합",
+            "url": "https://www.acmicpc.net/problem/1419"
           }
         ],
-        "total_problems_count": 11,
-        "unsolved_count": 10,
-        "solved_percentage": 9.09
+        "total_problems_count": 12,
+        "unsolved_count": 11,
+        "solved_percentage": 8.33
       },
       "kzzang131": {
         "name": "kzzang131",
         "solved_count": 0,
         "attempted_count": 0,
-        "penalty_count": 6,
+        "penalty_count": 7,
         "missed_problems": [
           {
             "date": "2025-03-04",
@@ -429,6 +465,12 @@
             "problem_id": 1051,
             "title": "숫자 정사각형",
             "url": "https://www.acmicpc.net/problem/1051"
+          },
+          {
+            "date": "2025-03-12",
+            "problem_id": 1419,
+            "title": "등차수열의 합",
+            "url": "https://www.acmicpc.net/problem/1419"
           }
         ],
         "solved_problems": [],
@@ -499,16 +541,282 @@
             "problem_id": 1051,
             "title": "숫자 정사각형",
             "url": "https://www.acmicpc.net/problem/1051"
+          },
+          {
+            "date": "2025-03-12",
+            "problem_id": 1419,
+            "title": "등차수열의 합",
+            "url": "https://www.acmicpc.net/problem/1419"
           }
         ],
-        "total_problems_count": 11,
-        "unsolved_count": 11,
+        "total_problems_count": 12,
+        "unsolved_count": 12,
         "solved_percentage": 0.0
       },
       "nes128": {
         "name": "nes128",
         "solved_count": 1,
         "attempted_count": 1,
+        "penalty_count": 6,
+        "missed_problems": [
+          {
+            "date": "2025-03-04",
+            "problem_id": 32142,
+            "title": "서바이벌",
+            "url": "https://www.acmicpc.net/problem/32142"
+          },
+          {
+            "date": "2025-03-05",
+            "problem_id": 20364,
+            "title": "부동산 다툼",
+            "url": "https://www.acmicpc.net/problem/20364"
+          },
+          {
+            "date": "2025-03-06",
+            "problem_id": 2108,
+            "title": "통계학",
+            "url": "https://www.acmicpc.net/problem/2108"
+          },
+          {
+            "date": "2025-03-07",
+            "problem_id": 32282,
+            "title": "너 그리고 나 (NAVILLERA)",
+            "url": "https://www.acmicpc.net/problem/32282"
+          },
+          {
+            "date": "2025-03-10",
+            "problem_id": 1593,
+            "title": "문자 해독",
+            "url": "https://www.acmicpc.net/problem/1593"
+          },
+          {
+            "date": "2025-03-12",
+            "problem_id": 1419,
+            "title": "등차수열의 합",
+            "url": "https://www.acmicpc.net/problem/1419"
+          }
+        ],
+        "solved_problems": [
+          {
+            "date": "2025-03-11",
+            "problem_id": 1051,
+            "title": "숫자 정사각형",
+            "url": "https://www.acmicpc.net/problem/1051"
+          }
+        ],
+        "attempted_problems": [
+          {
+            "date": "2025-03-11",
+            "problem_id": 1051,
+            "title": "숫자 정사각형",
+            "url": "https://www.acmicpc.net/problem/1051"
+          }
+        ],
+        "unsolved_problems": [
+          {
+            "date": "2025-03-01",
+            "problem_id": 2205,
+            "title": "저울 추 만들기",
+            "url": "https://www.acmicpc.net/problem/2205"
+          },
+          {
+            "date": "2025-03-02",
+            "problem_id": 2792,
+            "title": "보석 상자",
+            "url": "https://www.acmicpc.net/problem/2792"
+          },
+          {
+            "date": "2025-03-03",
+            "problem_id": 14731,
+            "title": "謎紛芥索紀 (Large)",
+            "url": "https://www.acmicpc.net/problem/14731"
+          },
+          {
+            "date": "2025-03-04",
+            "problem_id": 32142,
+            "title": "서바이벌",
+            "url": "https://www.acmicpc.net/problem/32142"
+          },
+          {
+            "date": "2025-03-05",
+            "problem_id": 20364,
+            "title": "부동산 다툼",
+            "url": "https://www.acmicpc.net/problem/20364"
+          },
+          {
+            "date": "2025-03-06",
+            "problem_id": 2108,
+            "title": "통계학",
+            "url": "https://www.acmicpc.net/problem/2108"
+          },
+          {
+            "date": "2025-03-07",
+            "problem_id": 32282,
+            "title": "너 그리고 나 (NAVILLERA)",
+            "url": "https://www.acmicpc.net/problem/32282"
+          },
+          {
+            "date": "2025-03-08",
+            "problem_id": 1248,
+            "title": "Guess",
+            "url": "https://www.acmicpc.net/problem/1248"
+          },
+          {
+            "date": "2025-03-09",
+            "problem_id": 1612,
+            "title": "가지고 노는 1",
+            "url": "https://www.acmicpc.net/problem/1612"
+          },
+          {
+            "date": "2025-03-10",
+            "problem_id": 1593,
+            "title": "문자 해독",
+            "url": "https://www.acmicpc.net/problem/1593"
+          },
+          {
+            "date": "2025-03-12",
+            "problem_id": 1419,
+            "title": "등차수열의 합",
+            "url": "https://www.acmicpc.net/problem/1419"
+          }
+        ],
+        "total_problems_count": 12,
+        "unsolved_count": 11,
+        "solved_percentage": 8.33
+      },
+      "ooo_0502": {
+        "name": "ooo_0502",
+        "solved_count": 0,
+        "attempted_count": 0,
+        "penalty_count": 7,
+        "missed_problems": [
+          {
+            "date": "2025-03-04",
+            "problem_id": 32142,
+            "title": "서바이벌",
+            "url": "https://www.acmicpc.net/problem/32142"
+          },
+          {
+            "date": "2025-03-05",
+            "problem_id": 20364,
+            "title": "부동산 다툼",
+            "url": "https://www.acmicpc.net/problem/20364"
+          },
+          {
+            "date": "2025-03-06",
+            "problem_id": 2108,
+            "title": "통계학",
+            "url": "https://www.acmicpc.net/problem/2108"
+          },
+          {
+            "date": "2025-03-07",
+            "problem_id": 32282,
+            "title": "너 그리고 나 (NAVILLERA)",
+            "url": "https://www.acmicpc.net/problem/32282"
+          },
+          {
+            "date": "2025-03-10",
+            "problem_id": 1593,
+            "title": "문자 해독",
+            "url": "https://www.acmicpc.net/problem/1593"
+          },
+          {
+            "date": "2025-03-11",
+            "problem_id": 1051,
+            "title": "숫자 정사각형",
+            "url": "https://www.acmicpc.net/problem/1051"
+          },
+          {
+            "date": "2025-03-12",
+            "problem_id": 1419,
+            "title": "등차수열의 합",
+            "url": "https://www.acmicpc.net/problem/1419"
+          }
+        ],
+        "solved_problems": [],
+        "attempted_problems": [],
+        "unsolved_problems": [
+          {
+            "date": "2025-03-01",
+            "problem_id": 2205,
+            "title": "저울 추 만들기",
+            "url": "https://www.acmicpc.net/problem/2205"
+          },
+          {
+            "date": "2025-03-02",
+            "problem_id": 2792,
+            "title": "보석 상자",
+            "url": "https://www.acmicpc.net/problem/2792"
+          },
+          {
+            "date": "2025-03-03",
+            "problem_id": 14731,
+            "title": "謎紛芥索紀 (Large)",
+            "url": "https://www.acmicpc.net/problem/14731"
+          },
+          {
+            "date": "2025-03-04",
+            "problem_id": 32142,
+            "title": "서바이벌",
+            "url": "https://www.acmicpc.net/problem/32142"
+          },
+          {
+            "date": "2025-03-05",
+            "problem_id": 20364,
+            "title": "부동산 다툼",
+            "url": "https://www.acmicpc.net/problem/20364"
+          },
+          {
+            "date": "2025-03-06",
+            "problem_id": 2108,
+            "title": "통계학",
+            "url": "https://www.acmicpc.net/problem/2108"
+          },
+          {
+            "date": "2025-03-07",
+            "problem_id": 32282,
+            "title": "너 그리고 나 (NAVILLERA)",
+            "url": "https://www.acmicpc.net/problem/32282"
+          },
+          {
+            "date": "2025-03-08",
+            "problem_id": 1248,
+            "title": "Guess",
+            "url": "https://www.acmicpc.net/problem/1248"
+          },
+          {
+            "date": "2025-03-09",
+            "problem_id": 1612,
+            "title": "가지고 노는 1",
+            "url": "https://www.acmicpc.net/problem/1612"
+          },
+          {
+            "date": "2025-03-10",
+            "problem_id": 1593,
+            "title": "문자 해독",
+            "url": "https://www.acmicpc.net/problem/1593"
+          },
+          {
+            "date": "2025-03-11",
+            "problem_id": 1051,
+            "title": "숫자 정사각형",
+            "url": "https://www.acmicpc.net/problem/1051"
+          },
+          {
+            "date": "2025-03-12",
+            "problem_id": 1419,
+            "title": "등차수열의 합",
+            "url": "https://www.acmicpc.net/problem/1419"
+          }
+        ],
+        "total_problems_count": 12,
+        "unsolved_count": 12,
+        "solved_percentage": 0.0
+      },
+      "spacegg13": {
+        "name": "spacegg13",
+        "solved_count": 2,
+        "attempted_count": 2,
         "penalty_count": 5,
         "missed_problems": [
           {
@@ -524,12 +832,6 @@
             "url": "https://www.acmicpc.net/problem/20364"
           },
           {
-            "date": "2025-03-06",
-            "problem_id": 2108,
-            "title": "통계학",
-            "url": "https://www.acmicpc.net/problem/2108"
-          },
-          {
             "date": "2025-03-07",
             "problem_id": 32282,
             "title": "너 그리고 나 (NAVILLERA)",
@@ -540,9 +842,21 @@
             "problem_id": 1593,
             "title": "문자 해독",
             "url": "https://www.acmicpc.net/problem/1593"
+          },
+          {
+            "date": "2025-03-12",
+            "problem_id": 1419,
+            "title": "등차수열의 합",
+            "url": "https://www.acmicpc.net/problem/1419"
           }
         ],
         "solved_problems": [
+          {
+            "date": "2025-03-06",
+            "problem_id": 2108,
+            "title": "통계학",
+            "url": "https://www.acmicpc.net/problem/2108"
+          },
           {
             "date": "2025-03-11",
             "problem_id": 1051,
@@ -551,6 +865,12 @@
           }
         ],
         "attempted_problems": [
+          {
+            "date": "2025-03-06",
+            "problem_id": 2108,
+            "title": "통계학",
+            "url": "https://www.acmicpc.net/problem/2108"
+          },
           {
             "date": "2025-03-11",
             "problem_id": 1051,
@@ -590,12 +910,6 @@
             "url": "https://www.acmicpc.net/problem/20364"
           },
           {
-            "date": "2025-03-06",
-            "problem_id": 2108,
-            "title": "통계학",
-            "url": "https://www.acmicpc.net/problem/2108"
-          },
-          {
             "date": "2025-03-07",
             "problem_id": 32282,
             "title": "너 그리고 나 (NAVILLERA)",
@@ -618,253 +932,23 @@
             "problem_id": 1593,
             "title": "문자 해독",
             "url": "https://www.acmicpc.net/problem/1593"
+          },
+          {
+            "date": "2025-03-12",
+            "problem_id": 1419,
+            "title": "등차수열의 합",
+            "url": "https://www.acmicpc.net/problem/1419"
           }
         ],
-        "total_problems_count": 11,
+        "total_problems_count": 12,
         "unsolved_count": 10,
-        "solved_percentage": 9.09
-      },
-      "ooo_0502": {
-        "name": "ooo_0502",
-        "solved_count": 0,
-        "attempted_count": 0,
-        "penalty_count": 6,
-        "missed_problems": [
-          {
-            "date": "2025-03-04",
-            "problem_id": 32142,
-            "title": "서바이벌",
-            "url": "https://www.acmicpc.net/problem/32142"
-          },
-          {
-            "date": "2025-03-05",
-            "problem_id": 20364,
-            "title": "부동산 다툼",
-            "url": "https://www.acmicpc.net/problem/20364"
-          },
-          {
-            "date": "2025-03-06",
-            "problem_id": 2108,
-            "title": "통계학",
-            "url": "https://www.acmicpc.net/problem/2108"
-          },
-          {
-            "date": "2025-03-07",
-            "problem_id": 32282,
-            "title": "너 그리고 나 (NAVILLERA)",
-            "url": "https://www.acmicpc.net/problem/32282"
-          },
-          {
-            "date": "2025-03-10",
-            "problem_id": 1593,
-            "title": "문자 해독",
-            "url": "https://www.acmicpc.net/problem/1593"
-          },
-          {
-            "date": "2025-03-11",
-            "problem_id": 1051,
-            "title": "숫자 정사각형",
-            "url": "https://www.acmicpc.net/problem/1051"
-          }
-        ],
-        "solved_problems": [],
-        "attempted_problems": [],
-        "unsolved_problems": [
-          {
-            "date": "2025-03-01",
-            "problem_id": 2205,
-            "title": "저울 추 만들기",
-            "url": "https://www.acmicpc.net/problem/2205"
-          },
-          {
-            "date": "2025-03-02",
-            "problem_id": 2792,
-            "title": "보석 상자",
-            "url": "https://www.acmicpc.net/problem/2792"
-          },
-          {
-            "date": "2025-03-03",
-            "problem_id": 14731,
-            "title": "謎紛芥索紀 (Large)",
-            "url": "https://www.acmicpc.net/problem/14731"
-          },
-          {
-            "date": "2025-03-04",
-            "problem_id": 32142,
-            "title": "서바이벌",
-            "url": "https://www.acmicpc.net/problem/32142"
-          },
-          {
-            "date": "2025-03-05",
-            "problem_id": 20364,
-            "title": "부동산 다툼",
-            "url": "https://www.acmicpc.net/problem/20364"
-          },
-          {
-            "date": "2025-03-06",
-            "problem_id": 2108,
-            "title": "통계학",
-            "url": "https://www.acmicpc.net/problem/2108"
-          },
-          {
-            "date": "2025-03-07",
-            "problem_id": 32282,
-            "title": "너 그리고 나 (NAVILLERA)",
-            "url": "https://www.acmicpc.net/problem/32282"
-          },
-          {
-            "date": "2025-03-08",
-            "problem_id": 1248,
-            "title": "Guess",
-            "url": "https://www.acmicpc.net/problem/1248"
-          },
-          {
-            "date": "2025-03-09",
-            "problem_id": 1612,
-            "title": "가지고 노는 1",
-            "url": "https://www.acmicpc.net/problem/1612"
-          },
-          {
-            "date": "2025-03-10",
-            "problem_id": 1593,
-            "title": "문자 해독",
-            "url": "https://www.acmicpc.net/problem/1593"
-          },
-          {
-            "date": "2025-03-11",
-            "problem_id": 1051,
-            "title": "숫자 정사각형",
-            "url": "https://www.acmicpc.net/problem/1051"
-          }
-        ],
-        "total_problems_count": 11,
-        "unsolved_count": 11,
-        "solved_percentage": 0.0
-      },
-      "spacegg13": {
-        "name": "spacegg13",
-        "solved_count": 2,
-        "attempted_count": 2,
-        "penalty_count": 4,
-        "missed_problems": [
-          {
-            "date": "2025-03-04",
-            "problem_id": 32142,
-            "title": "서바이벌",
-            "url": "https://www.acmicpc.net/problem/32142"
-          },
-          {
-            "date": "2025-03-05",
-            "problem_id": 20364,
-            "title": "부동산 다툼",
-            "url": "https://www.acmicpc.net/problem/20364"
-          },
-          {
-            "date": "2025-03-07",
-            "problem_id": 32282,
-            "title": "너 그리고 나 (NAVILLERA)",
-            "url": "https://www.acmicpc.net/problem/32282"
-          },
-          {
-            "date": "2025-03-10",
-            "problem_id": 1593,
-            "title": "문자 해독",
-            "url": "https://www.acmicpc.net/problem/1593"
-          }
-        ],
-        "solved_problems": [
-          {
-            "date": "2025-03-06",
-            "problem_id": 2108,
-            "title": "통계학",
-            "url": "https://www.acmicpc.net/problem/2108"
-          },
-          {
-            "date": "2025-03-11",
-            "problem_id": 1051,
-            "title": "숫자 정사각형",
-            "url": "https://www.acmicpc.net/problem/1051"
-          }
-        ],
-        "attempted_problems": [
-          {
-            "date": "2025-03-06",
-            "problem_id": 2108,
-            "title": "통계학",
-            "url": "https://www.acmicpc.net/problem/2108"
-          },
-          {
-            "date": "2025-03-11",
-            "problem_id": 1051,
-            "title": "숫자 정사각형",
-            "url": "https://www.acmicpc.net/problem/1051"
-          }
-        ],
-        "unsolved_problems": [
-          {
-            "date": "2025-03-01",
-            "problem_id": 2205,
-            "title": "저울 추 만들기",
-            "url": "https://www.acmicpc.net/problem/2205"
-          },
-          {
-            "date": "2025-03-02",
-            "problem_id": 2792,
-            "title": "보석 상자",
-            "url": "https://www.acmicpc.net/problem/2792"
-          },
-          {
-            "date": "2025-03-03",
-            "problem_id": 14731,
-            "title": "謎紛芥索紀 (Large)",
-            "url": "https://www.acmicpc.net/problem/14731"
-          },
-          {
-            "date": "2025-03-04",
-            "problem_id": 32142,
-            "title": "서바이벌",
-            "url": "https://www.acmicpc.net/problem/32142"
-          },
-          {
-            "date": "2025-03-05",
-            "problem_id": 20364,
-            "title": "부동산 다툼",
-            "url": "https://www.acmicpc.net/problem/20364"
-          },
-          {
-            "date": "2025-03-07",
-            "problem_id": 32282,
-            "title": "너 그리고 나 (NAVILLERA)",
-            "url": "https://www.acmicpc.net/problem/32282"
-          },
-          {
-            "date": "2025-03-08",
-            "problem_id": 1248,
-            "title": "Guess",
-            "url": "https://www.acmicpc.net/problem/1248"
-          },
-          {
-            "date": "2025-03-09",
-            "problem_id": 1612,
-            "title": "가지고 노는 1",
-            "url": "https://www.acmicpc.net/problem/1612"
-          },
-          {
-            "date": "2025-03-10",
-            "problem_id": 1593,
-            "title": "문자 해독",
-            "url": "https://www.acmicpc.net/problem/1593"
-          }
-        ],
-        "total_problems_count": 11,
-        "unsolved_count": 9,
-        "solved_percentage": 18.18
+        "solved_percentage": 16.67
       },
       "taroguru": {
         "name": "taroguru",
         "solved_count": 0,
         "attempted_count": 0,
-        "penalty_count": 6,
+        "penalty_count": 7,
         "missed_problems": [
           {
             "date": "2025-03-04",
@@ -901,6 +985,12 @@
             "problem_id": 1051,
             "title": "숫자 정사각형",
             "url": "https://www.acmicpc.net/problem/1051"
+          },
+          {
+            "date": "2025-03-12",
+            "problem_id": 1419,
+            "title": "등차수열의 합",
+            "url": "https://www.acmicpc.net/problem/1419"
           }
         ],
         "solved_problems": [],
@@ -971,10 +1061,16 @@
             "problem_id": 1051,
             "title": "숫자 정사각형",
             "url": "https://www.acmicpc.net/problem/1051"
+          },
+          {
+            "date": "2025-03-12",
+            "problem_id": 1419,
+            "title": "등차수열의 합",
+            "url": "https://www.acmicpc.net/problem/1419"
           }
         ],
-        "total_problems_count": 11,
-        "unsolved_count": 11,
+        "total_problems_count": 12,
+        "unsolved_count": 12,
         "solved_percentage": 0.0
       }
     },
@@ -3263,7 +3359,7 @@
       "name": "finalboss_kim",
       "total_solved": 35,
       "total_attempted": 35,
-      "total_penalty": 9,
+      "total_penalty": 10,
       "medals": [
         {
           "month": "2025-03",
@@ -3279,7 +3375,7 @@
       "name": "741u741",
       "total_solved": 48,
       "total_attempted": 48,
-      "total_penalty": 1,
+      "total_penalty": 2,
       "medals": [
         {
           "month": "2025-03",
@@ -3295,21 +3391,21 @@
       "name": "inu519",
       "total_solved": 16,
       "total_attempted": 16,
-      "total_penalty": 19,
+      "total_penalty": 20,
       "medals": []
     },
     "kzzang131": {
       "name": "kzzang131",
       "total_solved": 8,
       "total_attempted": 8,
-      "total_penalty": 25,
+      "total_penalty": 26,
       "medals": []
     },
     "nes128": {
       "name": "nes128",
       "total_solved": 23,
       "total_attempted": 23,
-      "total_penalty": 10,
+      "total_penalty": 11,
       "medals": [
         {
           "month": "2025-02",
@@ -3321,14 +3417,14 @@
       "name": "ooo_0502",
       "total_solved": 10,
       "total_attempted": 10,
-      "total_penalty": 21,
+      "total_penalty": 22,
       "medals": []
     },
     "spacegg13": {
       "name": "spacegg13",
       "total_solved": 26,
       "total_attempted": 26,
-      "total_penalty": 12,
+      "total_penalty": 13,
       "medals": [
         {
           "month": "2025-03",
@@ -3340,14 +3436,14 @@
       "name": "taroguru",
       "total_solved": 9,
       "total_attempted": 9,
-      "total_penalty": 24,
+      "total_penalty": 25,
       "medals": []
     }
   },
   "current_date": {
     "year": 2025,
     "month": 3,
-    "day": 11
+    "day": 12
   },
   "problems": {
     "2025-01-17": {
@@ -3604,6 +3700,11 @@
       "problem_id": 1051,
       "title": "숫자 정사각형",
       "url": "https://www.acmicpc.net/problem/1051"
+    },
+    "2025-03-12": {
+      "problem_id": 1419,
+      "title": "등차수열의 합",
+      "url": "https://www.acmicpc.net/problem/1419"
     }
   }
 }
